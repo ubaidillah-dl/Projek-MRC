@@ -16,4 +16,4 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         protocol: ftps
         port: 212
-  
+        server-dir: public_html/
