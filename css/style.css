@@ -15,6 +15,7 @@
 body {
   font-family: "Prompt", sans-serif;
   background-color: var(--bg);
+  height: 2000px;
 }
 
 /* Navbar */
@@ -23,25 +24,27 @@ body {
   justify-content: space-between;
   padding: 1rem 10%;
   background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
   align-items: center;
   margin: 0;
+  z-index: 9999;
 }
 
-.navbar .nav-logo,
-.navbar .menu {
+.navbar .nav-logo {
   display: flex;
   align-items: center;
 }
 
-.navbar .nav-logo:hover,
-.navbar .menu:hover {
+.navbar .nav-logo:hover {
   scale: 1.04;
   transition: 0.3s;
   filter: drop-shadow(0 0 5px var(--secondary));
 }
 
-.navbar .nav-logo a,
-.navbar .menu a {
+.navbar .nav-logo a {
   display: flex;
   align-items: center;
 }
@@ -81,12 +84,43 @@ body {
   transition: 0.2s;
 }
 
+.navbar .masuk {
+  height: 2.5rem;
+  width: 2.5rem;
+  background: var(--primary);
+  padding: 0.2rem;
+  border-radius: 15%;
+  align-items: center;
+  display: flex;
+}
+
+.navbar .masuk #masuk .feather {
+  height: 2.5rem;
+  width: 100%;
+  color: var(--bg);
+}
+
 .navbar .menu {
   height: 2.5rem;
   width: 2.5rem;
   background: var(--primary);
   padding: 0.2rem;
   border-radius: 15%;
+  align-items: center;
+  display: none;
+}
+
+.navbar .menu:hover,
+.navbar .masuk:hover {
+  scale: 1.07;
+  transition: 0.3s;
+  filter: drop-shadow(0 0 5px var(--secondary));
+}
+
+.navbar .menu a,
+.navbar .masuk a {
+  display: flex;
+  align-items: center;
 }
 
 .navbar .menu #humberger-menu .feather {
@@ -102,6 +136,10 @@ body {
   html {
     font-size: 90%;
   }
+
+  .navbar .nav-logo .logo-tittle {
+    display: none;
+  }
 }
 
 /* Tablet */
@@ -110,8 +148,13 @@ body {
     font-size: 80%;
   }
 
+  .navbar .nav-logo .logo-tittle {
+    display: none;
+  }
+
   .navbar .navbar-nav {
     position: absolute;
+    top: 100%;
     right: -100%;
     background: var(--primary);
     width: 40vw;
@@ -122,6 +165,18 @@ body {
 
   .navbar .navbar-nav.active {
     right: 0;
+  }
+
+  .navbar .menu {
+    display: flex;
+  }
+
+  .navbar .masuk #masuk .feather {
+    color: var(--primary);
+  }
+
+  .navbar .masuk {
+    background: none;
   }
 }
 
