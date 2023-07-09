@@ -50,12 +50,12 @@ body {
 }
 
 .navbar .nav-logo .logo-img img {
-  height: 4rem;
+  height: 3.5rem;
   margin-right: 1rem;
 }
 
 .navbar .nav-logo .logo-tittle {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 700;
   color: #fff;
 }
