@@ -1,0 +1,133 @@
+:root {
+  --primary: #ffd91d;
+  --secondary: #ff0000;
+  --bg: #000000;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Prompt", sans-serif;
+  background-color: var(--bg);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 10%;
+  background: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  margin: 0;
+}
+
+.navbar .nav-logo,
+.navbar .menu {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .nav-logo:hover,
+.navbar .menu:hover {
+  scale: 1.04;
+  transition: 0.3s;
+  filter: drop-shadow(0 0 5px var(--secondary));
+}
+
+.navbar .nav-logo a,
+.navbar .menu a {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .nav-logo .logo-img img {
+  height: 4rem;
+  margin-right: 1rem;
+}
+
+.navbar .nav-logo .logo-tittle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  border-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--secondary);
+  transform: scaleX(0);
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+  transition: 0.2s;
+}
+
+.navbar .menu {
+  height: 2.5rem;
+  width: 2.5rem;
+  background: var(--primary);
+  padding: 0.2rem;
+  border-radius: 15%;
+}
+
+.navbar .menu #humberger-menu .feather {
+  height: 2.5rem;
+  width: 100%;
+  color: var(--bg);
+}
+
+/* ///////////////////////////////////////////////////////////////// */
+
+/* Laptop */
+@media (max-width: 1200px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 80%;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    right: -100%;
+    background: var(--primary);
+    width: 40vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+}
+
+/* Phone */
+@media (max-width: 480px) {
+  html {
+    font-size: 70%;
+  }
+}
