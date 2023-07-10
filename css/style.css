@@ -159,8 +159,28 @@ body {
     background: var(--primary);
     width: 40vw;
     height: 100vh;
-    top: 0;
-    bottom: 0;
+    transition: 0.5s;
+  }
+
+  .navbar .navbar-nav a {
+    display: block;
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+  }
+
+  .navbar .navbar-nav a:hover {
+    color: #fff;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+    border-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--secondary);
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
   }
 
   .navbar .navbar-nav.active {
