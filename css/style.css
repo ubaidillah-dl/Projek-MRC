@@ -138,9 +138,30 @@ body {
   height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("../assets/Bg1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  animation: animate 25s infinite ease-in-out;
+  -webkit-animation: animate 25s infinite ease-in-out;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    background-image: url("../assets/Bg1.jpg");
+    /* background-position: left; */
+  }
+  25% {
+    background-image: url("../assets/Bg2.jpg");
+    /* background-position: right; */
+  }
+  50% {
+    background-image: url("../assets/Bg3.jpg");
+    /* background-position: left; */
+  }
+  75% {
+    background-image: url("../assets/Bg4.jpg");
+    /* background-position: right; */
+  }
 }
 
 .hero::after {
