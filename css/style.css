@@ -1,6 +1,9 @@
 :root {
   --primary: #ffd91d;
+  --pritrans: #ffd91d5e;
   --secondary: #ff0000;
+  --sectrans: #ff000073;
+  --font: #ffe30d;
   --bg: #000000;
 }
 * {
@@ -14,7 +17,7 @@
 
 body {
   font-family: "Prompt", sans-serif;
-  background-color: var(--bg);
+  background: var(--bg);
   height: 2000px;
 }
 
@@ -23,7 +26,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 1rem 10%;
-  background: rgba(0, 0, 0, 0.8);
+  background: var(--bg);
   position: fixed;
   top: 0;
   right: 0;
@@ -129,6 +132,54 @@ body {
   color: var(--bg);
 }
 
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../assets/Bg1.jpg");
+  background-repeat: no-repeat;
+  background-size: 200%;
+}
+
+.hero::after {
+  content: "";
+  background: rgba(191, 163, 21, 0.8);
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+
+.hero .content {
+  z-index: 1;
+  padding: 1rem 10%;
+  max-width: 60rem;
+  left: 0;
+}
+
+.hero .content h3 {
+  color: red;
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+  text-shadow: 1px 1px 0 var(--bg);
+}
+
+.hero .content h2 {
+  color: #fff;
+  text-shadow: 2.5px 2.5px 0 var(--secondary);
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: 400;
+  font-family: "Black Ops One", cursive;
+  margin-bottom: 1rem;
+}
+
+.hero .content p {
+  font-size: 1.2rem;
+  color: #000;
+}
+
 /* ///////////////////////////////////////////////////////////////// */
 
 /* Laptop */
@@ -156,27 +207,35 @@ body {
     position: absolute;
     top: 100%;
     right: -100%;
-    background: var(--primary);
+    background: var(--bg);
     width: 40vw;
     height: 100vh;
     transition: 0.5s;
   }
 
+  .navbar .navbar-nav::before {
+    content: "";
+    background-color: var(--pritrans);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
   .navbar .navbar-nav a {
-    display: block;
-    color: var(--bg);
+    position: relative;
     display: block;
     margin: 1.5rem;
   }
 
   .navbar .navbar-nav a:hover {
-    color: #fff;
+    color: var(--bg);
   }
 
   .navbar .navbar-nav a::after {
     transform-origin: 0 0;
     border-bottom: 0.5rem;
     border-bottom: 0.1rem solid var(--secondary);
+    z-index: 1;
   }
 
   .navbar .navbar-nav a:hover::after {
