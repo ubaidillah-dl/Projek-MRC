@@ -140,8 +140,8 @@ body {
   align-items: center;
   background-repeat: no-repeat;
   background-size: cover;
-  animation: animate 25s infinite ease-in-out;
-  -webkit-animation: animate 25s infinite ease-in-out;
+  animation: animate 30s infinite ease-in-out;
+  -webkit-animation: animate 30s infinite alternate;
 }
 
 @keyframes animate {
