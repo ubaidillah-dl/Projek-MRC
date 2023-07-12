@@ -21,6 +21,10 @@ body {
   height: 2000px;
 }
 
+body .hero .content h2 {
+  font-family: "Black Ops One", sans-serif;
+}
+
 /* Navbar */
 .navbar {
   display: flex;
@@ -139,25 +143,29 @@ body {
   display: flex;
   align-items: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 200%;
   background-image: url("../assets/Bg1.jpg");
-  animation: animate 40s infinite ease-in-out;
-  -webkit-animation: animate 40s infinite alternate ease;
+  animation: animate 250s infinite alternate linear;
+  -webkit-animation: animate 250s infinite alternate linear;
 }
 
 @keyframes animate {
   0%,
   100% {
     background-image: url(../assets/Bg1.jpg);
+    background-position: right top;
   }
   25% {
     background-image: url(../assets/Bg2.jpg);
+    background-position: left bottom;
   }
   50% {
     background-image: url(../assets/Bg3.jpg);
+    background-position: right top;
   }
   75% {
     background-image: url(../assets/Bg4.jpg);
+    background-position: left bottom;
   }
 }
 
@@ -189,7 +197,6 @@ body {
   font-size: 3rem;
   line-height: 3rem;
   font-weight: 400;
-  font-family: "Black Ops One", cursive;
   margin-bottom: 1rem;
 }
 
