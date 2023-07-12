@@ -140,27 +140,24 @@ body {
   align-items: center;
   background-repeat: no-repeat;
   background-size: cover;
-  animation: animate 30s infinite ease-in-out;
-  -webkit-animation: animate 30s infinite alternate;
+  background-image: url("../assets/Bg1.jpg");
+  animation: animate 40s infinite ease-in-out;
+  -webkit-animation: animate 40s infinite alternate ease;
 }
 
 @keyframes animate {
   0%,
   100% {
-    background-image: url("../assets/Bg1.jpg");
-    /* background-position: left; */
+    background-image: url(../assets/Bg1.jpg);
   }
   25% {
-    background-image: url("../assets/Bg2.jpg");
-    /* background-position: right; */
+    background-image: url(../assets/Bg2.jpg);
   }
   50% {
-    background-image: url("../assets/Bg3.jpg");
-    /* background-position: left; */
+    background-image: url(../assets/Bg3.jpg);
   }
   75% {
-    background-image: url("../assets/Bg4.jpg");
-    /* background-position: right; */
+    background-image: url(../assets/Bg4.jpg);
   }
 }
 
