@@ -22,7 +22,7 @@ html {
 body {
   font-family: "Prompt", sans-serif;
   background: var(--bg);
-  height: 2000px;
+  /* height: 2000px; */
 }
 
 /* Navbar */
@@ -242,20 +242,32 @@ body {
 }
 
 /* Linimasa */
-.linimasa {
+.tentang,
+.linimasa,
+.rulebook,
+.trackline,
+.kontak {
   padding: 1rem 10%;
-  padding-top: 5rem;
+  padding-top: 7rem;
   padding-bottom: 5rem;
   color: #fff;
 }
 
-.linimasa h2 {
+.tentang h2,
+.linimasa h2,
+.rulebook h2,
+.trackline h2,
+.kontak h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 3rem;
 }
 
-.linimasa h2 span {
+.tentang h2 span,
+.linimasa h2 span,
+.rulebook h2 span,
+.trackline h2 span,
+.kontak h2 span {
   color: var(--primary);
   text-shadow: 2px 2px 0 var(--secondary);
 }
@@ -269,6 +281,39 @@ body {
   width: 80%;
 }
 
+/* Footer */
+footer {
+  background: var(--pritrans);
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1rem 0 1rem;
+}
+
+footer .sosial,
+footer .link {
+  padding: 0.5rem 0;
+}
+
+footer .sosial a,
+footer .link a {
+  color: #fff;
+  padding: 0 0.5rem;
+}
+
+footer .sosial a:hover,
+footer .link a:hover {
+  color: var(--bg);
+}
+
+footer .credit {
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+footer .credit a {
+  color: var(--bg);
+  font-weight: 700;
+}
 /* ///////////////////////////////////////////////////////////////// */
 
 /* Laptop */
@@ -345,6 +390,11 @@ body {
 
   .navbar .masuk {
     background: none;
+  }
+
+  .linimasa {
+    padding: 5rem 7% 1.4rem;
+    color: #fff;
   }
 
   .linimasa .row .linimasa-img img {
