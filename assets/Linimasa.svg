@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Creator: CorelDRAW X8 -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="1104.99mm" height="225.903mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 44722 9143"
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="774.565mm" height="225.903mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 306522 89397"
  xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
   <font id="FontID0" horiz-adv-x="722" font-variant="normal" style="fill-rule:nonzero" font-style="normal" font-weight="700">
@@ -54,46 +54,47 @@ viewBox="0 0 44722 9143"
   <style type="text/css">
    <![CDATA[
     @font-face { font-family:"Arial";font-variant:normal;font-style:normal;font-weight:bold;src:url("#FontID0") format(svg)}
-    .str0 {stroke:#FFD91D;stroke-width:121.418}
+    .str1 {stroke:#FFD91D;stroke-width:791.468}
+    .str0 {stroke:#FFD91D;stroke-width:989.335}
     .fil3 {fill:none}
     .fil2 {fill:#FEFEFE}
     .fil0 {fill:red}
     .fil1 {fill:#FFD91D}
-    .fnt2 {font-weight:bold;font-size:586.026px;font-family:'Arial'}
-    .fnt3 {font-weight:bold;font-size:837.828px;font-family:'Arial'}
-    .fnt1 {font-weight:bold;font-size:837.832px;font-family:'Arial'}
-    .fnt0 {font-weight:bold;font-size:877.912px;font-family:'Arial'}
+    .fnt2 {font-weight:bold;font-size:5730.03px;font-family:'Arial'}
+    .fnt3 {font-weight:bold;font-size:8192.09px;font-family:'Arial'}
+    .fnt1 {font-weight:bold;font-size:8192.13px;font-family:'Arial'}
+    .fnt0 {font-weight:bold;font-size:8584.03px;font-family:'Arial'}
    ]]>
   </style>
  </defs>
  <g id="Layer_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-  <g id="_1713392982352">
-   <polygon class="fil0" points="1383,491 9865,491 10764,1391 9865,2290 1383,2290 484,1391 "/>
-   <rect class="fil0" transform="matrix(1.07515 -1.07515 1.07515 1.07515 0.00107588 1212.73)" width="1128" height="1128"/>
-   <rect class="fil1" transform="matrix(1.07515 -1.07515 1.07515 1.07515 0.00107588 1390.81)" width="1128" height="1128"/>
-   <text x="2912" y="1705"  class="fil2 fnt0">PENDAFTARAN</text>
-   <text x="1015" y="1692"  class="fil0 fnt1">1</text>
-   <polygon class="fil1" points="18786,2290 9986,2290 11080,1196 19881,1196 "/>
-   <text x="11095" y="1899"  class="fil0 fnt2">19 Juli - 31 September 2023</text>
-   <polygon class="fil0" points="43727,3761 32254,3761 31355,4661 32254,5560 43727,5560 44627,4661 "/>
-   <text x="32700" y="4975"  class="fil2 fnt0">TECHNICAL MEETING</text>
-   <rect class="fil0" transform="matrix(-1.07515 -1.07515 -1.07515 1.07515 44722.2 4482.42)" width="1128" height="1128"/>
-   <rect class="fil1" transform="matrix(-1.07515 -1.07515 -1.07515 1.07515 44722.2 4660.5)" width="1128" height="1128"/>
-   <text x="43287" y="4962"  class="fil0 fnt3">2</text>
-   <polygon class="fil1" points="26325,5560 32133,5560 31057,4485 25250,4485 "/>
-   <text x="26417" y="5232"  class="fil0 fnt2">13 Oktober 2023</text>
-   <polygon class="fil0" points="1445,7031 5419,7031 6319,7930 5419,8830 1445,8830 1024,7930 "/>
-   <rect class="fil0" transform="matrix(1.07515 -1.07515 1.07515 1.07515 0.00107588 7752.11)" width="1128" height="1128"/>
-   <rect class="fil1" transform="matrix(1.07515 -1.07515 1.07515 1.07515 0.00107588 7930.19)" width="1128" height="1128"/>
-   <text x="2651" y="8244"  class="fil2 fnt0">RACE</text>
-   <text x="982" y="8226"  class="fil0 fnt3">3</text>
-   <polygon class="fil1" points="12543,8830 5541,8830 6635,7736 13637,7736 "/>
-   <text x="6728" y="8493"  class="fil0 fnt2">14 - 15 Oktober 2023</text>
-   <polyline class="fil3 str0" points="1213,2599 43510,2604 43510,3294 "/>
-   <polygon class="fil1" points="43510,3448 43573,3333 43637,3217 43510,3217 43382,3217 43446,3333 "/>
-   <polyline class="fil3 str0" points="43510,5873 1213,5873 1213,6600 "/>
-   <polygon class="fil1" points="1213,6717 1276,6602 1340,6487 1213,6487 1085,6487 1149,6602 "/>
+  <g id="_1713422583504">
+   <polygon class="fil0" points="13527,4804 96453,4804 105248,13599 96453,22394 13527,22394 4732,13599 "/>
+   <rect class="fil0" transform="matrix(1.07515 -1.07515 1.07515 1.07515 0.0105197 11857.8)" width="11029" height="11029"/>
+   <rect class="fil1" transform="matrix(1.07515 -1.07515 1.07515 1.07515 0.0105197 13599)" width="11029" height="11029"/>
+   <text x="28469" y="16672"  class="fil2 fnt0">PENDAFTARAN</text>
+   <text x="9924" y="16548"  class="fil0 fnt1">1</text>
+   <polygon class="fil1" points="183686,22393 97640,22394 108338,11697 194388,11697 "/>
+   <text x="108487" y="18570"  class="fil0 fnt2">19 Juli - 31 September 2023</text>
+   <polygon class="fil0" points="296795,36774 184612,36774 175817,45569 184612,54365 296795,54365 305590,45569 "/>
+   <text x="188969" y="48642"  class="fil2 fnt0">TECHNICAL MEETING</text>
+   <rect class="fil0" transform="matrix(-1.07515 -1.07515 -1.07515 1.07515 306522 43828.1)" width="11029" height="11029"/>
+   <rect class="fil1" transform="matrix(-1.07515 -1.07515 -1.07515 1.07515 306522 45569.3)" width="11029" height="11029"/>
+   <text x="292489" y="48518"  class="fil0 fnt3">2</text>
+   <polygon class="fil1" points="126638,54365 183425,54365 172911,43851 116124,43851 "/>
+   <text x="127535" y="51159"  class="fil0 fnt2">13 Oktober 2023</text>
+   <polygon class="fil0" points="14130,68744 52989,68744 61785,77540 52989,86335 14130,86335 10009,77540 "/>
+   <rect class="fil0" transform="matrix(1.07515 -1.07515 1.07515 1.07515 0.0105197 75798.4)" width="11029" height="11029"/>
+   <rect class="fil1" transform="matrix(1.07515 -1.07515 1.07515 1.07515 0.0105197 77539.6)" width="11029" height="11029"/>
+   <text x="25926" y="80613"  class="fil2 fnt0">RACE</text>
+   <text x="9601" y="80436"  class="fil0 fnt3">3</text>
+   <polygon class="fil1" points="122639,86335 54177,86335 64872,75639 133335,75639 "/>
+   <text x="65783" y="83038"  class="fil0 fnt2">14 - 15 Oktober 2023</text>
+   <polyline class="fil3 str0" points="11858,25415 294664,25415 294664,32212 "/>
+   <polygon class="fil1" points="294664,33712 295287,32585 295910,31458 294664,31458 293418,31458 294041,32585 "/>
+   <polyline class="fil3 str1" points="294664,57427 11858,57427 11858,64530 "/>
+   <polygon class="fil1" points="11858,65682 12481,64555 13104,63429 11858,63429 10611,63429 11235,64555 "/>
   </g>
  </g>
 </svg>
