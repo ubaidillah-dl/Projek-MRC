@@ -15,6 +15,10 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Prompt", sans-serif;
   background: var(--bg);
@@ -256,8 +260,13 @@ body {
   text-shadow: 2px 2px 0 var(--secondary);
 }
 
+.linimasa .row .linimasa-img {
+  display: flex;
+  justify-content: center;
+}
+
 .linimasa .row .linimasa-img img {
-  width: 100%;
+  width: 80%;
 }
 
 /* ///////////////////////////////////////////////////////////////// */
@@ -337,11 +346,19 @@ body {
   .navbar .masuk {
     background: none;
   }
+
+  .linimasa .row .linimasa-img img {
+    width: 90%;
+  }
 }
 
 /* Phone */
 @media (max-width: 480px) {
   html {
     font-size: 70%;
+  }
+
+  .linimasa .row .linimasa-img img {
+    width: 100%;
   }
 }
