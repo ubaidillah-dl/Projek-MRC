@@ -185,8 +185,21 @@ body {
 .hero .content {
   z-index: 1;
   padding: 1rem 10%;
-  max-width: 60rem;
+  /* max-width: 60rem; */
   left: 0;
+}
+
+.hero .content .row {
+  display: flex;
+  align-items: center;
+}
+
+.hero .content .row .tema {
+  flex: 1 1 60rem;
+}
+
+.hero .content .row .tombol {
+  flex: 1 1 30rem;
 }
 
 .hero .content h3 {
@@ -224,7 +237,8 @@ body {
 
 .hero .content a {
   display: block;
-  margin-top: 1rem;
+  margin: 0.7rem 0;
+  margin-left: auto;
   font-weight: 400;
   background: linear-gradient(var(--primary) -30%, var(--secondary) 100%);
   color: #fff;
@@ -239,6 +253,11 @@ body {
   scale: 1.04;
   transition: 0.3s;
   filter: drop-shadow(1px 1px 5px var(--bg));
+}
+
+.hero .content .row .tombol .tombol-tentang {
+  background: none;
+  border: 2px #fff solid;
 }
 
 /* Linimasa */
@@ -399,6 +418,21 @@ footer .credit a {
 
   .linimasa .row .linimasa-img img {
     width: 90%;
+  }
+
+  .hero .content .row {
+    flex-wrap: wrap;
+  }
+  .hero .content .row .tombol {
+    margin-top: 3rem;
+  }
+
+  .hero .content a {
+    margin: 1rem auto;
+  }
+
+  .hero .content .row .tema {
+    text-align: center;
   }
 }
 
