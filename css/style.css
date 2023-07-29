@@ -498,13 +498,14 @@ footer .credit a {
     background: none;
   }
 
-  .linimasa {
-    padding: 5rem 7% 1.4rem;
-    color: #fff;
+  .linimasa .row .linimasa-img img {
+    width: 100%;
   }
 
-  .linimasa .row .linimasa-img img {
-    width: 90%;
+  .trackline video {
+    width: 100%;
+    border-radius: 10px;
+    align-items: center;
   }
 
   .hero .content .row,
