@@ -512,7 +512,8 @@ footer .credit a {
   }
 
   .hero .content .row,
-  .tentang .row {
+  .tentang .row,
+  .kontak .row {
     flex-wrap: wrap;
   }
 
