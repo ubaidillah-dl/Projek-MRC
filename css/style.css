@@ -537,6 +537,15 @@ footer .credit a {
   .hero .content .row .tema {
     text-align: center;
   }
+
+  .kontak .row .map {
+    height: 20rem;
+    border-radius: 0.6rem 0.6rem 0rem 0rem;
+  }
+
+  .kontak .row form {
+    padding-top: 0;
+  }
 }
 
 /* Phone */
