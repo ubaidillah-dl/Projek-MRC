@@ -1,0 +1,44 @@
+:root {
+  --primary: #ffd91d;
+  --pritrans: #ffd91d5e;
+  --secondary: #ff0000;
+  --sectrans: #ff000073;
+  --font: #ffe30d;
+  --bg: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Prompt", sans-serif;
+  background: var(--bg);
+  padding: 7;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .content {
+  background-color: var(--pritrans);
+  padding: 2rem 10%;
+  border-radius: 10px;
+}
+
+.container .content h3 {
+  text-align: center;
+  padding-bottom: 1rem;
+  color: #fff;
+}

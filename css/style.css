@@ -247,6 +247,43 @@ body {
   border: 1.5px #fff solid;
 }
 
+/* Trackline */
+.trackline .row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.trackline .row .tombol-unduh {
+  padding-top: 1rem;
+}
+
+.trackline .row .tombol-unduh a {
+  margin: 0.7rem 0;
+  display: inline-block;
+  margin-left: 1rem;
+  font-weight: 400;
+  background: linear-gradient(var(--primary) -30%, var(--secondary) 100%);
+  color: #fff;
+  padding: 0.5rem 0;
+  width: 8rem;
+  text-align: center;
+  border-radius: 5px;
+  filter: drop-shadow(1px 1px 1px var(--bg));
+}
+
+.trackline .row .tombol-unduh a:hover {
+  scale: 1.04;
+  transition: 0.3s;
+  filter: drop-shadow(1px 1px 5px var(--bg));
+}
+
+.trackline video {
+  width: 80%;
+  border-radius: 10px;
+  align-items: center;
+}
+
 /* Tentang kami */
 .tentang .row {
   display: flex;
@@ -255,7 +292,7 @@ body {
 
 .tentang .row .foto {
   flex: 1 1 30rem;
-  border-radius: 5px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   aspect-ratio: 4/3;
@@ -545,6 +582,10 @@ footer .credit a {
 
   .kontak .row form {
     padding-top: 0;
+  }
+
+  .trackline video {
+    width: 100%;
   }
 }
 
