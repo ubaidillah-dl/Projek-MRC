@@ -256,8 +256,8 @@ body {
 }
 
 .hero .content .row .tombol .tombol-tentang {
-  background: none;
-  border: 2px #fff solid;
+  background: rgba(255, 0, 0, 0.2);
+  border: 1.5px #fff solid;
 }
 
 /* Linimasa */
@@ -424,10 +424,14 @@ footer .credit a {
     flex-wrap: wrap;
   }
   .hero .content .row .tombol {
-    margin-top: 3rem;
+    margin-top: 1.2rem;
   }
 
-  .hero .content a {
+  .hero .content .row .tema h2 {
+    margin-top: 1.5rem;
+  }
+
+  .hero .content .row .tombol a {
     margin: 1rem auto;
   }
 
