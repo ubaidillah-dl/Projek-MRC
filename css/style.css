@@ -185,7 +185,6 @@ body {
 .hero .content {
   z-index: 1;
   padding: 1rem 10%;
-  /* max-width: 60rem; */
   left: 0;
 }
 
@@ -196,10 +195,6 @@ body {
 
 .hero .content .row .tema {
   flex: 1 1 60rem;
-}
-
-.hero .content .row .tombol {
-  flex: 1 1 30rem;
 }
 
 .hero .content h3 {
@@ -223,19 +218,11 @@ body {
   filter: drop-shadow(1px 1px 1px var(--bg));
 }
 
-.hero .content p {
-  font-size: 1rem;
-  color: #fff;
-  font-weight: 400;
-  filter: drop-shadow(1px 1px 1px var(--bg));
-  margin-bottom: 0.6rem;
+.hero .content .row .tombol {
+  flex: 1 1 30rem;
 }
 
-.hero .content p span {
-  font-weight: 600;
-}
-
-.hero .content a {
+.hero .content .row .tombol a {
   display: block;
   margin: 0.7rem 0;
   margin-left: auto;
@@ -249,7 +236,7 @@ body {
   filter: drop-shadow(1px 1px 1px var(--bg));
 }
 
-.hero .content a:hover {
+.hero .content .row .tombol a:hover {
   scale: 1.04;
   transition: 0.3s;
   filter: drop-shadow(1px 1px 5px var(--bg));
@@ -258,6 +245,61 @@ body {
 .hero .content .row .tombol .tombol-tentang {
   background: rgba(255, 0, 0, 0.2);
   border: 1.5px #fff solid;
+}
+
+/* Tentang kami */
+.tentang .row {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.tentang .row .foto {
+  flex: 1 1 30rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  aspect-ratio: 4/3;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../assets/Bg1.jpg");
+  animation: slide 25s infinite alternate;
+  -webkit-animation: slide 25s infinite alternate;
+}
+
+.tentang .row .foto:hover {
+  scale: 1.01;
+  transition: 0.3s;
+}
+
+@keyframes slide {
+  0%,
+  100% {
+    background-image: url(../assets/Bg1.jpg);
+  }
+  25% {
+    background-image: url(../assets/Bg2.jpg);
+  }
+  50% {
+    background-image: url(../assets/Bg3.jpg);
+  }
+  75% {
+    background-image: url(../assets/Bg4.jpg);
+  }
+}
+
+.tentang .row .keterangan {
+  flex: 1 1 30rem;
+}
+
+.tentang .row .keterangan p {
+  font-size: 1rem;
+}
+
+.tentang .row .keterangan p span {
+  color: var(--primary);
+  font-family: "Black Ops One", sans-serif;
+  text-shadow: 1px 1px 0 var(--secondary);
 }
 
 /* Linimasa */
@@ -420,9 +462,16 @@ footer .credit a {
     width: 90%;
   }
 
-  .hero .content .row {
+  .hero .content .row,
+  .tentang .row {
     flex-wrap: wrap;
   }
+
+  .tentang .row .keterangan {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+
   .hero .content .row .tombol {
     margin-top: 1.2rem;
   }
