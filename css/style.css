@@ -295,7 +295,7 @@ body {
   border-radius: 10px;
   display: flex;
   align-items: center;
-  aspect-ratio: 4/3;
+  aspect-ratio: 4/2;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -358,7 +358,7 @@ body {
 .kontak h2 {
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .tentang h2 span,
@@ -370,62 +370,21 @@ body {
   text-shadow: 2px 2px 0 var(--secondary);
 }
 
+/* .linimasa .row {
+  background-color: red;
+} */
+
 .linimasa .row .linimasa-img {
   display: flex;
   justify-content: center;
+  /* background-color: red; */
 }
 
 .linimasa .row .linimasa-img img {
+  border: 0.1rem solid var(--primary);
+  border-radius: 10px;
+  padding: 1.5rem;
   width: 80%;
-}
-
-/* Kontak */
-.kontak .row {
-  display: flex;
-  margin-top: 3rem;
-  background: #222;
-  border-radius: 0.6rem;
-}
-
-.kontak .row .map {
-  flex: 1 1 45rem;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 0.6rem 0rem 0rem 0.6rem;
-}
-.kontak .row form {
-  flex: 1 1 45rem;
-  padding: 2rem 2rem;
-  text-align: center;
-}
-
-.kontak .row form .input-grub {
-  padding: 0.6rem;
-  display: flex;
-  align-items: center;
-  margin-top: 2rem;
-  background-color: var(--bg);
-  border: 1px solid #eee;
-  border-radius: 0.6rem;
-}
-
-.kontak .row form .input-grub input {
-  width: 100%;
-  font-size: 1.2rem;
-  background: none;
-  padding-left: 0.6rem;
-  color: #fff;
-}
-
-.kontak .row form .btn {
-  margin-top: 2rem;
-  display: inline-block;
-  padding: 0.6rem 1rem;
-  font-size: 1.2rem;
-  color: #fff;
-  background: var(--primary);
-  border-radius: 0.6rem;
-  cursor: pointer;
 }
 
 /* Footer */
