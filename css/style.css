@@ -342,6 +342,55 @@ body {
   width: 80%;
 }
 
+/* Kontak */
+.kontak .row {
+  display: flex;
+  margin-top: 3rem;
+  background: #222;
+  border-radius: 0.6rem;
+}
+
+.kontak .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.6rem 0rem 0rem 0.6rem;
+}
+.kontak .row form {
+  flex: 1 1 45rem;
+  padding: 2rem 2rem;
+  text-align: center;
+}
+
+.kontak .row form .input-grub {
+  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--bg);
+  border: 1px solid #eee;
+  border-radius: 0.6rem;
+}
+
+.kontak .row form .input-grub input {
+  width: 100%;
+  font-size: 1.2rem;
+  background: none;
+  padding-left: 0.6rem;
+  color: #fff;
+}
+
+.kontak .row form .btn {
+  margin-top: 2rem;
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  font-size: 1.2rem;
+  color: #fff;
+  background: var(--primary);
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+
 /* Footer */
 footer {
   background: var(--pritrans);
