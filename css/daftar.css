@@ -35,13 +35,6 @@ body {
   background-color: green;
   width: 20rem;
   text-align: center;
-  /* display: block; */
-  /* display: inline-block; */
-  /* display: flex; */
-  /* align-items: center; */
-  /* flex-wrap: wrap; */
-  /* justify-content: center; */
-  /* text-align: center; */
 }
 
 .daftar-lomba .logo img {
@@ -72,7 +65,8 @@ body {
   border-radius: 10px;
   align-items: center;
   background-color: var(--pritrans);
-  padding: 3rem;
+  padding: 2rem;
+  font-size: 0.9rem;
 }
 /* 
 .daftar-lomba .row .content form {
@@ -97,16 +91,22 @@ body {
 .daftar-lomba .row .content .input {
   display: flex;
   justify-content: space-between;
-  margin: 0.2rem 0;
+  /* margin: 0.2rem 0; */
+}
+
+.daftar-lomba .row .content label {
+  width: 25rem;
 }
 
 .daftar-lomba .row .content input {
   padding: 0.5rem 7%;
   background-color: green;
   color: #fff;
-  width: 20rem;
+  width: 100%;
+  height: 2.3rem;
   border-radius: 10px;
   display: block;
+  margin: 0.15rem 0;
 }
 
 a {
@@ -147,10 +147,34 @@ a:hover {
 
   .daftar-lomba {
     display: block;
+    width: 80%;
+    margin: 0 auto;
   }
 
-  /* .daftar-lomba .row .content {
+  .daftar-lomba .row .content .input {
+    display: block;
+  }
+
+  .daftar-lomba .row .content .input input {
     width: 100%;
+    height: 3rem;
+  }
+
+  .daftar-lomba .row .content {
+    font-size: 1.2rem;
+  }
+
+  .daftar-lomba .logo {
+    /* background-color: green; */
+    /* width: 20rem; */
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  /* .daftar-lomba .logo img {
+    display: block;
+    width: 6rem;
+    margin: 0 auto;
   } */
 }
 
