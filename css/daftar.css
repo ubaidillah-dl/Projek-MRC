@@ -31,32 +31,85 @@ body {
   align-items: center;
 }
 
+.daftar-lomba .logo {
+  background-color: green;
+  width: 20rem;
+  text-align: center;
+  /* display: block; */
+  /* display: inline-block; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* flex-wrap: wrap; */
+  /* justify-content: center; */
+  /* text-align: center; */
+}
+
+.daftar-lomba .logo img {
+  display: block;
+  width: 6rem;
+  margin: 0 auto;
+}
+
 .daftar-lomba .row {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-
+/* 
 .daftar-lomba .row h2 {
   text-align: center;
   font-size: 2rem;
   padding-bottom: 1rem;
-}
+} */
 
-.daftar-lomba .row h2 span {
+/* .daftar-lomba .row h2 span {
   color: var(--primary);
   text-shadow: 2px 2px 0 var(--secondary);
-}
+} */
 
 .daftar-lomba .row .content {
-  width: 80%;
+  width: 100%;
   border-radius: 10px;
   align-items: center;
   background-color: var(--pritrans);
   padding: 3rem;
 }
+/* 
+.daftar-lomba .row .content form {
+  display: flex;
+  background-color: red;
+  justify-content: center;
+  align-items: center;
+} */
 
-.tombol a {
+/* .daftar-lomba .row .content form .umum {
+  background-color: cyan;
+} */
+
+/* .daftar-lomba .row .content form .ketua {
+  background-color: grey;
+} */
+
+/* .daftar-lomba .row .content form .anggota {
+  background-color: pink;
+} */
+
+.daftar-lomba .row .content .input {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.2rem 0;
+}
+
+.daftar-lomba .row .content input {
+  padding: 0.5rem 7%;
+  background-color: green;
+  color: #fff;
+  width: 20rem;
+  border-radius: 10px;
+  display: block;
+}
+
+a {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -71,7 +124,7 @@ body {
   filter: drop-shadow(1px 1px 1px var(--bg));
 }
 
-.tombol a:hover {
+a:hover {
   scale: 1.04;
   transition: 0.3s;
   filter: drop-shadow(1px 1px 5px var(--bg));
@@ -92,9 +145,13 @@ body {
     font-size: 80%;
   }
 
-  .daftar-lomba .row .content {
-    width: 100%;
+  .daftar-lomba {
+    display: block;
   }
+
+  /* .daftar-lomba .row .content {
+    width: 100%;
+  } */
 }
 
 /* Phone */
