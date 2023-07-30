@@ -19,26 +19,87 @@
 body {
   font-family: "Prompt", sans-serif;
   background: var(--bg);
-  padding: 7;
 }
 
-.container {
-  display: flex;
-  position: relative;
-  height: 100vh;
-  bottom: 0;
-  align-items: center;
-  justify-content: center;
-}
-
-.container .content {
-  background-color: var(--pritrans);
-  padding: 2rem 10%;
-  border-radius: 10px;
-}
-
-.container .content h3 {
-  text-align: center;
-  padding-bottom: 1rem;
+.daftar-lomba {
+  padding: 0 10%;
   color: #fff;
+  height: 100vh;
+  background-color: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.daftar-lomba .row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.daftar-lomba .row h2 {
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+.daftar-lomba .row h2 span {
+  color: var(--primary);
+  text-shadow: 2px 2px 0 var(--secondary);
+}
+
+.daftar-lomba .row .content {
+  width: 80%;
+  border-radius: 10px;
+  align-items: center;
+  background-color: var(--pritrans);
+  padding: 3rem;
+}
+
+.tombol a {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  font-weight: 400;
+  background: linear-gradient(var(--primary) -30%, var(--secondary) 100%);
+  color: #fff;
+  padding: 0.5rem 0;
+  width: 5rem;
+  text-align: center;
+  border-radius: 5px;
+  filter: drop-shadow(1px 1px 1px var(--bg));
+}
+
+.tombol a:hover {
+  scale: 1.04;
+  transition: 0.3s;
+  filter: drop-shadow(1px 1px 5px var(--bg));
+}
+
+/* ///////////////////////////////////////////////////////////////// */
+
+/* Laptop */
+@media (max-width: 1200px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 80%;
+  }
+
+  .daftar-lomba .row .content {
+    width: 100%;
+  }
+}
+
+/* Phone */
+@media (max-width: 480px) {
+  html {
+    font-size: 70%;
+  }
 }
