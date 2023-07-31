@@ -18,7 +18,8 @@
 
 body {
   font-family: "Prompt", sans-serif;
-  background: var(--bg);
+  background-color: var(--bg);
+  color: #fff;
 }
 
 .daftar-lomba {
@@ -32,66 +33,47 @@ body {
 }
 
 .daftar-lomba .logo {
-  background-color: green;
-  width: 20rem;
+  width: 25rem;
   text-align: center;
+  padding-right: 5rem;
+}
+
+.daftar-lomba .logo h2 {
+  line-height: 2.3rem;
+  font-size: 2rem;
+  font-weight: bold;
+  filter: drop-shadow(1px 1px 1px var(--bg));
+}
+
+.daftar-lomba .logo h2 span {
+  color: var(--primary);
+  text-shadow: 2px 2px 0 var(--secondary);
 }
 
 .daftar-lomba .logo img {
   display: block;
-  width: 6rem;
+  width: 20rem;
   margin: 0 auto;
 }
 
-.daftar-lomba .row {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.daftar-lomba .logo img:hover,
+.daftar-lomba .logo h2:hover {
+  scale: 1.04;
+  transition: 0.3s;
+  filter: drop-shadow(1px 1px 5px var(--secondary));
 }
-/* 
-.daftar-lomba .row h2 {
-  text-align: center;
-  font-size: 2rem;
-  padding-bottom: 1rem;
-} */
-
-/* .daftar-lomba .row h2 span {
-  color: var(--primary);
-  text-shadow: 2px 2px 0 var(--secondary);
-} */
 
 .daftar-lomba .row .content {
-  width: 100%;
   border-radius: 10px;
-  align-items: center;
   background-color: var(--pritrans);
+  filter: drop-shadow(1px 1px 1px var(--bg));
   padding: 2rem;
   font-size: 0.9rem;
 }
-/* 
-.daftar-lomba .row .content form {
-  display: flex;
-  background-color: red;
-  justify-content: center;
-  align-items: center;
-} */
-
-/* .daftar-lomba .row .content form .umum {
-  background-color: cyan;
-} */
-
-/* .daftar-lomba .row .content form .ketua {
-  background-color: grey;
-} */
-
-/* .daftar-lomba .row .content form .anggota {
-  background-color: pink;
-} */
 
 .daftar-lomba .row .content .input {
   display: flex;
   justify-content: space-between;
-  /* margin: 0.2rem 0; */
 }
 
 .daftar-lomba .row .content label {
@@ -99,14 +81,34 @@ body {
 }
 
 .daftar-lomba .row .content input {
-  padding: 0.5rem 7%;
-  background-color: green;
-  color: #fff;
+  padding: 0.5rem 5%;
+  background-color: #eee;
+  color: #000000;
   width: 100%;
   height: 2.3rem;
   border-radius: 10px;
   display: block;
   margin: 0.15rem 0;
+}
+
+.daftar-lomba .row .content input:hover {
+  scale: 1.04;
+  transition: 0.3s;
+}
+
+/* .daftar-lomba .row .content input:hover::placeholder {
+  color: var(--bg);
+} */
+
+.daftar-lomba .row .content input:focus {
+  background-color: var(--pritrans);
+  color: #fff;
+  scale: 1.04;
+  transition: 0.3s;
+}
+
+.daftar-lomba .row .content input:focus::placeholder {
+  color: #c4c2c2;
 }
 
 a {
@@ -131,7 +133,6 @@ a:hover {
 }
 
 /* ///////////////////////////////////////////////////////////////// */
-
 /* Laptop */
 @media (max-width: 1200px) {
   html {
@@ -165,17 +166,22 @@ a:hover {
   }
 
   .daftar-lomba .logo {
-    /* background-color: green; */
-    /* width: 20rem; */
-    text-align: center;
     margin: 0 auto;
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 0;
   }
 
-  /* .daftar-lomba .logo img {
-    display: block;
-    width: 6rem;
-    margin: 0 auto;
-  } */
+  .daftar-lomba .logo h2 {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .daftar-lomba .logo img {
+    width: 10rem;
+  }
 }
 
 /* Phone */

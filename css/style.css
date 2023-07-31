@@ -370,14 +370,9 @@ body {
   text-shadow: 2px 2px 0 var(--secondary);
 }
 
-/* .linimasa .row {
-  background-color: red;
-} */
-
 .linimasa .row .linimasa-img {
   display: flex;
   justify-content: center;
-  /* background-color: red; */
 }
 
 .linimasa .row .linimasa-img img {
