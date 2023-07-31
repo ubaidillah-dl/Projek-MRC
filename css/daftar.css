@@ -217,6 +217,8 @@ a:hover {
 
   .daftar-lomba .row .content .input input {
     width: 100%;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
     /* height: 2rem; */
   }
 
