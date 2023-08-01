@@ -87,9 +87,7 @@ body {
   background-color: #eee;
   color: #000000;
   width: 100%;
-  /* height: 2.3rem; */
   border-radius: 10px;
-  /* margin: 0.15rem 0; */
 }
 
 .daftar-lomba .row .content label {
@@ -103,62 +101,19 @@ body {
 }
 
 .daftar-lomba .row .content input[type="file"] {
-  /* height: 2rem; */
-  /* background-color: var(--bg); */
   padding: 0;
   padding: 0 5%;
 }
 
 .daftar-lomba .row .content input::file-selector-button {
   cursor: pointer;
-  /* display: inline-flex; */
   height: 2rem;
   border: none;
-  /* justify-content: flex-start; */
-  /* margin: 0.15rem 0; */
-  /* background-color: green; */
-  /* font-weight: 600; */
   border-right: 1px solid var(--bg);
-  /* border-radius: 10px; */
   margin-right: 1rem;
   margin-left: 0;
   padding-left: 0;
 }
-/* .daftar-lomba .row .content input[type="file"] { */
-/* display: block; */
-/* justify-content: center; */
-/* align-items: center; */
-/* vertical-align: center; */
-/* object-position: bottom; */
-/* margin: 0; */
-/* padding: 0; */
-/* left: 0; */
-/* padding-top: 1.5%; */
-/* padding-bottom: 1.5%; */
-/* padding-left: 5%; */
-/* padding-right: 5%; */
-
-/* height: 2rem; */
-/* padding: -5%; */
-/* background-color: transparent; */
-/* border: 1px solid var(--pritrans); */
-/* padding: 0; */
-/* } */
-/* .daftar-lomba .row .content input::file-selector-button { */
-/* justify-content: center; */
-/* align-items: center; */
-/* margin-top: 50%; */
-/* margin-bottom: 50%; */
-/* flex-wrap: nowrap; */
-/* position: relative; */
-/* border: none; */
-/* background: var(--pritrans); */
-/* color: #fff; */
-/* border-radius: 1rem; */
-/* padding: 0 5%; */
-/* height: 2rem; */
-/* left: 0; */
-/* } */
 
 .daftar-lomba .row .content input:focus {
   background-color: var(--pritrans);
@@ -210,9 +165,7 @@ a:hover {
     display: block;
     width: 100%;
     margin: 0 auto;
-    /* background-color: red; */
     height: 100%;
-    /* margin-bottom: 2rem; */
   }
 
   .daftar-lomba .row .content {
@@ -233,13 +186,6 @@ a:hover {
 
   .daftar-lomba .row .content input[type="file"] {
     height: 1000%;
-    /* background-color: var(--bg); */
-    /* padding: 0; */
-    /* padding: 0 5%; */
-  }
-
-  .daftar-lomba .row .content {
-    font-size: 1.2rem;
   }
 
   .daftar-lomba .logo {

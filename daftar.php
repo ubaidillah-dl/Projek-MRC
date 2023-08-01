@@ -20,11 +20,15 @@
   <body>
     <!-- Daftar lomba start -->
     <section class="daftar-lomba" id="Daftar-Lomba">
+      <!-- Logo start -->
       <div class="logo">
         <h2>Daftar <span>Sekarang</span> Dan Raih Hadiah <span>Jutaan</span> Rupiah</h2>
         <img src="assets/LogoMRC.png" alt="" />
       </div>
+      <!-- Logo end -->
+
       <div class="row">
+        <!-- Kontent start -->
         <div class="content">
           <form action="">
             <div class="nama-tim input"><label for="nama-tim">Nama Tim</label><input autofocus autocomplete="off" type="text" placeholder="Masukkan Nama Tim" id="nama-tim" /></div>
@@ -48,6 +52,7 @@
             <a href="https://chat.whatsapp.com/BcvSS6QzrZFHr2PKZRVj41" type="submit">Kirim</a>
           </form>
         </div>
+        <!-- Kontent end -->
       </div>
     </section>
     <!-- Daftar lomba end -->
