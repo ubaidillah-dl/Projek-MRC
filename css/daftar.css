@@ -116,7 +116,8 @@ body {
   border: none;
   /* justify-content: flex-start; */
   /* margin: 0.15rem 0; */
-  /* background-color: var(--pritrans); */
+  /* background-color: green; */
+  font-weight: 600;
   border-right: 1px solid var(--bg);
   /* border-radius: 10px; */
   margin-right: 1rem;
@@ -219,7 +220,7 @@ a:hover {
     width: 100%;
     padding-top: 0.1rem;
     padding-bottom: 0.1rem;
-    height: 2rem;
+    height: 2.3rem;
   }
 
   .daftar-lomba .row .content input[type="file"] {
