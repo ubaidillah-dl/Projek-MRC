@@ -103,7 +103,7 @@ body {
 }
 
 .daftar-lomba .row .content input[type="file"] {
-  height: 2rem;
+  /* height: 2rem; */
   /* background-color: var(--bg); */
   padding: 0;
   padding: 0 5%;
@@ -219,7 +219,14 @@ a:hover {
     width: 100%;
     padding-top: 0.1rem;
     padding-bottom: 0.1rem;
-    /* height: 2rem; */
+    height: 2rem;
+  }
+
+  .daftar-lomba .row .content input[type="file"] {
+    height: 1000%;
+    /* background-color: var(--bg); */
+    /* padding: 0; */
+    /* padding: 0 5%; */
   }
 
   .daftar-lomba .row .content {
