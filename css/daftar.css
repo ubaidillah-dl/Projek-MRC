@@ -117,7 +117,7 @@ body {
   /* justify-content: flex-start; */
   /* margin: 0.15rem 0; */
   /* background-color: green; */
-  font-weight: 600;
+  /* font-weight: 600; */
   border-right: 1px solid var(--bg);
   /* border-radius: 10px; */
   margin-right: 1rem;
@@ -213,6 +213,7 @@ a:hover {
   }
 
   .daftar-lomba .row .content .input {
+    margin-top: 0.7rem;
     display: block;
   }
 
