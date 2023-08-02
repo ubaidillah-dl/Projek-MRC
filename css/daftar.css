@@ -126,7 +126,11 @@ body {
   color: #c4c2c2;
 }
 
-a {
+/* button {
+  background-color: red;
+} */
+
+button {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -141,7 +145,7 @@ a {
   filter: drop-shadow(1px 1px 1px var(--bg));
 }
 
-a:hover {
+button:hover {
   scale: 1.04;
   transition: 0.3s;
   filter: drop-shadow(1px 1px 5px var(--bg));
