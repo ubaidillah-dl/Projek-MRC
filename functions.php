@@ -1,6 +1,6 @@
 <?php
-// konek database
-require "konfig.php";
+// koneksi database
+$conn = mysqli_connect("localhost", "root", "", "event_mrc");
 
 function query($query)
 {
