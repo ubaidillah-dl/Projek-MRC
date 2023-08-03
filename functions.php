@@ -1,6 +1,7 @@
 <?php
-// koneksi database
-$conn = mysqli_connect("localhost", "root", "", "event_mrc");
+// konek database
+// $conn = mysqli_connect("localhost", "root", "", "event_mrc");
+$conn = mysqli_connect("localhost", "event_mrc", "MRC@CY!WSVQuNuzlWkVzXP5g", "event_mrc");
 
 function query($query)
 {
