@@ -159,13 +159,6 @@ if (isset($_POST["kirim"])) {
                             document.location.href = 'https://chat.whatsapp.com/BcvSS6QzrZFHr2PKZRVj41'; 
                         </script>
                     ";
-        } else {
-            echo    "
-                        <script>
-                            alert('Gagal mendaftar di MRC 2023 !');
-                            document.location.href = 'daftar.php'; 
-                        </script>
-                    ";
         }
     }
 }
@@ -313,13 +306,6 @@ if (isset($_POST["ubah"])) {
             echo    "
                         <script>
                             alert('Data berhasil diubah !');
-                            document.location.href = 'admin.php'; 
-                        </script>
-                    ";
-        } else {
-            echo    "
-                        <script>
-                            alert('Data gagal diubah !');
                             document.location.href = 'admin.php'; 
                         </script>
                     ";
