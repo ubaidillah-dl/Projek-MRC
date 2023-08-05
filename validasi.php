@@ -12,7 +12,6 @@ $error_nama_anggota = "";
 $error_ktm_anggota = "";
 $error_bukti_up_twibbon_anggota = "";
 $ekstensi = ['jpg', 'jpeg', 'png', 'pdf'];
-// $cek = "s";
 
 if (isset($_POST["kirim"])) {
 
@@ -158,6 +157,13 @@ if (isset($_POST["kirim"])) {
                         <script>
                             alert('Berhasil mendaftar di MRC 2023 !');
                             document.location.href = 'https://chat.whatsapp.com/BcvSS6QzrZFHr2PKZRVj41'; 
+                        </script>
+                    ";
+        } else {
+            echo    "
+                        <script>
+                            alert('Gagal mendaftar di MRC 2023 !');
+                            document.location.href = 'daftar.php'; 
                         </script>
                     ";
         }
@@ -307,6 +313,13 @@ if (isset($_POST["ubah"])) {
             echo    "
                         <script>
                             alert('Data berhasil diubah !');
+                            document.location.href = 'admin.php'; 
+                        </script>
+                    ";
+        } else {
+            echo    "
+                        <script>
+                            alert('Data gagal diubah !');
                             document.location.href = 'admin.php'; 
                         </script>
                     ";
