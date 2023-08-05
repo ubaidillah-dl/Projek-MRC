@@ -1,6 +1,7 @@
 <?php
+
 // koneksi database
-require "functions.php";
+require "fungsi.php";
 
 // ambil data daru tabel peserta_mrc
 $mrc = query("SELECT * FROM peserta_mrc");

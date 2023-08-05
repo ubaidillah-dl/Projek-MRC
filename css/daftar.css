@@ -126,6 +126,11 @@ body {
   color: #c4c2c2;
 }
 
+.error {
+  color: red;
+  background-color: green;
+}
+
 /* button {
   background-color: red;
 } */

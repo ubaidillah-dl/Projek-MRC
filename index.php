@@ -72,7 +72,10 @@
     <h2>Track<span>line</span></h2>
     <div class="row">
       <video src="assets/Track.mp4" autoplay muted loop></video>
-      <div class="tombol-unduh"><a href="">Unduh .PNG</a> <a href="">Unduh .CDR</a></div>
+      <div class="tombol-unduh">
+        <a href="">Unduh .PNG</a>
+        <a href="">Unduh .CDR</a>
+      </div>
     </div>
   </section>
   <!-- Track end -->
