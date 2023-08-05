@@ -1,6 +1,6 @@
 <?php
 
-require "validasi.php";
+include "validasi.php";
 ?>
 
 <!DOCTYPE html>
