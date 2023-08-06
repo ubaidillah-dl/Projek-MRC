@@ -1,8 +1,74 @@
 <?php
 
 // konek database
-$conn = mysqli_connect("localhost", "root", "", "event_mrc");
-// $conn = mysqli_connect("localhost", "event_mrc", "MRC@CY!WSVQuNuzlWkVzXP5g", "event_mrc");
+// $conn = mysqli_connect("localhost", "root", "", "event_mrc");
+$conn = mysqli_connect("localhost", "event_mrc", "MRC@CY!WSVQuNuzlWkVzXP5g", "event_mrc");
+
+function validasi()
+{
+
+    $ekstensi = ['jpg', 'jpeg', 'png', 'pdf'];
+    $maksimal = 1000000;
+
+    // Cek bukti pembayaran start
+    $nm_bukti_pembayaran = $_FILES["bukti_pembayaran"]["name"];
+    $sze_bukti_pembayaran = $_FILES["bukti_pembayaran"]["size"];
+    $eks_bukti_pembayaran = explode('.', $nm_bukti_pembayaran);
+    $eks_bukti_pembayaran = strtolower(end($eks_bukti_pembayaran));
+    // Cek bukti pembayaran end
+
+    // Cek ktm ketua start
+    $nm_ktm_ketua = $_FILES["ktm_ketua"]["name"];
+    $sze_ktm_ketua = $_FILES["ktm_ketua"]["size"];
+    $eks_ktm_ketua = explode('.', $nm_ktm_ketua);
+    $eks_ktm_ketua = strtolower(end($eks_ktm_ketua));
+    // Cek ktm ketua end
+
+    // Cek bukti up twibon ketua start
+    $nm_bukti_up_twibbon_ketua = $_FILES["bukti_up_twibbon_ketua"]["name"];
+    $sze_bukti_up_twibbon_ketua = $_FILES["bukti_up_twibbon_ketua"]["size"];
+    $eks_bukti_up_twibbon_ketua = explode('.', $nm_bukti_up_twibbon_ketua);
+    $eks_bukti_up_twibbon_ketua = strtolower(end($eks_bukti_up_twibbon_ketua));
+    // Cek bukti up twibon ketua end
+
+    // Cek ktm anggota start
+    $nm_ktm_anggota = $_FILES["ktm_anggota"]["name"];
+    $sze_ktm_anggota = $_FILES["ktm_anggota"]["size"];
+    $eks_ktm_anggota = explode('.', $nm_ktm_anggota);
+    $eks_ktm_anggota = strtolower(end($eks_ktm_anggota));
+    // Cek ktm anggota end
+
+    // Cek bukti up twibon anggota start
+    $nm_bukti_up_twibbon_anggota = $_FILES["bukti_up_twibbon_anggota"]["name"];
+    $sze_bukti_up_twibbon_anggota = $_FILES["bukti_up_twibbon_anggota"]["size"];
+    $eks_bukti_up_twibbon_anggota = explode('.', $nm_bukti_up_twibbon_anggota);
+    $eks_bukti_up_twibbon_anggota = strtolower(end($eks_bukti_up_twibbon_anggota));
+    // Cek bukti up twibon anggota end
+
+    $error = (!in_array($eks_bukti_pembayaran, $ekstensi) ||
+        !in_array(
+            $eks_ktm_ketua,
+            $ekstensi
+        ) ||
+        !in_array($eks_bukti_up_twibbon_ketua, $ekstensi) ||
+        !in_array(
+            $eks_ktm_anggota,
+            $ekstensi
+        ) ||
+        !in_array($eks_bukti_up_twibbon_anggota, $ekstensi) ||
+        ($sze_bukti_pembayaran > $maksimal) ||
+        ($sze_ktm_ketua > $maksimal) ||
+        ($sze_bukti_up_twibbon_ketua > $maksimal) ||
+        ($sze_ktm_anggota > $maksimal) ||
+        ($sze_bukti_up_twibbon_anggota > $maksimal)
+    );
+
+    if ($error) {
+        return false;
+    } else {
+        return true;
+    }
+}
 
 function query($query)
 {

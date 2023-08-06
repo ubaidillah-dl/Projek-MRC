@@ -1,6 +1,28 @@
 <?php
 
-require "validasi.php";
+require "fungsi.php";
+
+if (isset($_POST["kirim"])) {
+    if (validasi($_POST)) {
+
+        if (daftar($_POST) > 0) {
+            echo    '
+                        <script>
+                            alert("Berhasil mendaftar di MRC 2023 !");
+                            document.location.href = "https://chat.whatsapp.com/BcvSS6QzrZFHr2PKZRVj41"; 
+                        </script>
+                    ';
+        }
+    } else {
+        echo    '
+                    <script>
+                        alert("Gagal mendaftar di MRC 2023 \n\nPastikan ekstensi file jpg, jpeg, png atau pdf maksimal 1MB !");
+                        document.location.href = "daftar.php"; 
+                    </script>
+                ';
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
