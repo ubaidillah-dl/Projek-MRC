@@ -64,7 +64,8 @@ if (isset($_POST["kirim"])) {
                 <form action="" method="post" enctype="multipart/form-data">
 
                     <!-- Error start -->
-                    <div style="text-align: end; color: red; font-size: 0.8rem">Ekstensi file harus jpg, jpeg,png atau
+                    <div style="text-align: end; color: yellow; font-size: 0.8rem">Ekstensi file harus jpg, jpeg,png
+                        atau
                         pdf maksimal 1 MB !</div>
                     <!-- Error end -->
 

@@ -1,12 +1,12 @@
 <?php
 
 // session
-session_start();
+// session_start();
 
-if (!isset($_SESSION["admin"])) {
-    header("Location:masuk_admin.php");
-    exit;
-}
+// if (!isset($_SESSION["admin"])) {
+//     header("Location:masuk_admin.php");
+//     exit;
+// }
 
 // konek database
 require '../fungsi.php';
