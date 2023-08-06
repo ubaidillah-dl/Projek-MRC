@@ -1,8 +1,8 @@
 <?php
 
 // konek database
-// $conn = mysqli_connect("localhost", "root", "", "event_mrc");
-$conn = mysqli_connect("localhost", "event_mrc", "MRC@CY!WSVQuNuzlWkVzXP5g", "event_mrc");
+$conn = mysqli_connect("localhost", "root", "", "event_mrc");
+// $conn = mysqli_connect("localhost", "event_mrc", "MRC@CY!WSVQuNuzlWkVzXP5g", "event_mrc");
 
 $ekstensi = ['jpg', 'jpeg', 'png', 'pdf'];
 $maksimal = 1000000;
@@ -43,12 +43,7 @@ function daftar($data)
         !$ktm_anggota ||
         !$bukti_up_twibbon_anggota
     ) {
-        echo    '
-                    <script>
-                        alert("Gagal mendaftar di MRC 2023 \n\nPastikan ekstensi file jpg, jpeg, png atau pdf maksimal 1MB !");
-                        document.location.href = "daftar.php"; 
-                    </script>
-                ';
+
 
         return false;
     }
@@ -99,10 +94,21 @@ function up_bukti_pembayaran()
     $eks_bukti_pembayaran = strtolower(end($eks_bukti_pembayaran));
 
     if (!in_array($eks_bukti_pembayaran, $ekstensi)) {
+        echo    '
+                        <script>
+                            alert("Gagal !");
+                        </script>
+                ';
+
         return false;
     }
 
     if ($sze_bukti_pembayaran > $maksimal) {
+        echo    '
+                        <script>
+                            alert("Gagal !");
+                        </script>
+                ';
         return false;
     }
 
@@ -130,10 +136,21 @@ function up_ktm_ketua()
     $eks_ktm_ketua = strtolower(end($eks_ktm_ketua));
 
     if (!in_array($eks_ktm_ketua, $ekstensi)) {
+        echo    '
+                        <script>
+                            alert("Gagal !");
+                        </script>
+                ';
+
         return false;
     }
 
     if ($sze_ktm_ketua > $maksimal) {
+        echo    '
+                        <script>
+                            alert("Gagal !");
+                        </script>
+                ';
         return false;
     }
 
@@ -161,10 +178,20 @@ function up_bukti_up_twibbon_ketua()
     $eks_bukti_up_twibbon_ketua = strtolower(end($eks_bukti_up_twibbon_ketua));
 
     if (!in_array($eks_bukti_up_twibbon_ketua, $ekstensi) || $sze_bukti_up_twibbon_ketua > $maksimal) {
+        echo    '
+                        <script>
+                            alert("Gagal !");
+                        </script>
+                ';
         return false;
     }
 
     if ($sze_bukti_up_twibbon_ketua > $maksimal) {
+        echo    '
+                        <script>
+                            alert("Gagal !");
+                        </script>
+                ';
         return false;
     }
 
@@ -192,10 +219,20 @@ function up_ktm_anggota()
     $eks_ktm_anggota = strtolower(end($eks_ktm_anggota));
 
     if (!in_array($eks_ktm_anggota, $ekstensi) || $sze_ktm_anggota > $maksimal) {
+        echo    '
+                        <script>
+                            alert("Gagal !");
+                        </script>
+                ';
         return false;
     }
 
     if ($sze_ktm_anggota > $maksimal) {
+        echo    '
+                        <script>
+                            alert("Gagal !");
+                        </script>
+                ';
         return false;
     }
 
@@ -224,10 +261,20 @@ function up_bukti_up_twibbon_anggota()
     $eks_bukti_up_twibbon_anggota = strtolower(end($eks_bukti_up_twibbon_anggota));
 
     if (!in_array($eks_bukti_up_twibbon_anggota, $ekstensi) || $sze_bukti_up_twibbon_anggota > $maksimal) {
+        echo    '
+                        <script>
+                            alert("Gagal !");
+                        </script>
+                ';
         return false;
     }
 
     if ($sze_bukti_up_twibbon_anggota > $maksimal) {
+        echo    '
+                        <script>
+                            alert("Gagal !");
+                        </script>
+                ';
         return false;
     }
 
