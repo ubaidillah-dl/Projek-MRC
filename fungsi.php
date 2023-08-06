@@ -83,23 +83,26 @@ function query($query)
 
 function daftar($data)
 {
-    global $conn;
 
-    $nama_tim = htmlspecialchars($data["nama_tim"]);
-    $nama_instansi = htmlspecialchars($data["nama_instansi"]);
-    $nama_pembina = htmlspecialchars($data["nama_pembina"]);
-    $nama_ketua = htmlspecialchars($data["nama_ketua"]);
-    $email_ketua = htmlspecialchars($data["email_ketua"]);
-    $nomor_whatsapp_ketua = htmlspecialchars($data["nomor_whatsapp_ketua"]);
-    $nama_anggota = htmlspecialchars($data["nama_anggota"]);
+    if (validasi($_POST)) {
 
-    $bukti_pembayaran = up_bukti_pembayaran();
-    $ktm_ketua = up_ktm_ketua();
-    $bukti_up_twibbon_ketua = up_bukti_up_twibbon_ketua();
-    $ktm_anggota = up_ktm_anggota();
-    $bukti_up_twibbon_anggota = up_bukti_up_twibbon_anggota();
+        global $conn;
 
-    $query = "INSERT INTO peserta_mrc VALUES ('',
+        $nama_tim = htmlspecialchars($data["nama_tim"]);
+        $nama_instansi = htmlspecialchars($data["nama_instansi"]);
+        $nama_pembina = htmlspecialchars($data["nama_pembina"]);
+        $nama_ketua = htmlspecialchars($data["nama_ketua"]);
+        $email_ketua = htmlspecialchars($data["email_ketua"]);
+        $nomor_whatsapp_ketua = htmlspecialchars($data["nomor_whatsapp_ketua"]);
+        $nama_anggota = htmlspecialchars($data["nama_anggota"]);
+
+        $bukti_pembayaran = up_bukti_pembayaran();
+        $ktm_ketua = up_ktm_ketua();
+        $bukti_up_twibbon_ketua = up_bukti_up_twibbon_ketua();
+        $ktm_anggota = up_ktm_anggota();
+        $bukti_up_twibbon_anggota = up_bukti_up_twibbon_anggota();
+
+        $query = "INSERT INTO peserta_mrc VALUES ('',
               '$nama_tim',
               '$nama_instansi', 
               '$nama_pembina', 
@@ -113,9 +116,10 @@ function daftar($data)
               '$ktm_anggota', 
               '$bukti_up_twibbon_anggota'
             )";
-    mysqli_query($conn, $query);
+        mysqli_query($conn, $query);
 
-    return mysqli_affected_rows($conn);
+        return mysqli_affected_rows($conn);
+    }
 }
 
 function cari($keyword)

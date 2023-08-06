@@ -3,16 +3,15 @@
 require "fungsi.php";
 
 if (isset($_POST["kirim"])) {
-    if (validasi($_POST)) {
+    // if (validasi($_POST)) {
 
-        if (daftar($_POST) > 0) {
-            echo    '
+    if (daftar($_POST) > 0) {
+        echo    '
                         <script>
                             alert("Berhasil mendaftar di MRC 2023 !");
                             document.location.href = "https://chat.whatsapp.com/BcvSS6QzrZFHr2PKZRVj41"; 
                         </script>
                     ';
-        }
     } else {
         echo    '
                     <script>
@@ -21,6 +20,7 @@ if (isset($_POST["kirim"])) {
                     </script>
                 ';
     }
+    // }
 }
 
 ?>
