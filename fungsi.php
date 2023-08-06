@@ -43,8 +43,6 @@ function daftar($data)
         !$ktm_anggota ||
         !$bukti_up_twibbon_anggota
     ) {
-
-
         return false;
     }
 
@@ -67,20 +65,6 @@ function daftar($data)
     return mysqli_affected_rows($conn);
 }
 
-function cari($keyword)
-{
-    $query = "SELECT * FROM peserta_mrc WHERE 
-            nama_tim LIKE '%$keyword%' OR 
-            nama_instansi LIKE '%$keyword%' OR
-            nama_pembina LIKE '%$keyword%' OR
-            nama_ketua LIKE '%$keyword%' OR
-            email_ketua LIKE '%$keyword%' OR
-            nomor_whatsapp_ketua LIKE '%$keyword%' OR
-            nama_anggota LIKE '%$keyword%'
-            ";
-    return query($query);
-}
-
 function up_bukti_pembayaran()
 {
     global $ekstensi, $maksimal;
@@ -93,11 +77,7 @@ function up_bukti_pembayaran()
     $eks_bukti_pembayaran = explode('.', $nama_bukti_pembayaran);
     $eks_bukti_pembayaran = strtolower(end($eks_bukti_pembayaran));
 
-    if (!in_array($eks_bukti_pembayaran, $ekstensi)) {
-        return false;
-    }
-
-    if ($sze_bukti_pembayaran > $maksimal) {
+    if (!in_array($eks_bukti_pembayaran, $ekstensi) || $sze_bukti_pembayaran > $maksimal) {
         return false;
     }
 
@@ -124,12 +104,7 @@ function up_ktm_ketua()
     $eks_ktm_ketua = explode('.', $nama_ktm_ketua);
     $eks_ktm_ketua = strtolower(end($eks_ktm_ketua));
 
-    if (!in_array($eks_ktm_ketua, $ekstensi)) {
-        return false;
-    }
-
-    if ($sze_ktm_ketua > $maksimal) {
-
+    if (!in_array($eks_ktm_ketua, $ekstensi) || $sze_ktm_ketua > $maksimal) {
         return false;
     }
 
@@ -157,12 +132,6 @@ function up_bukti_up_twibbon_ketua()
     $eks_bukti_up_twibbon_ketua = strtolower(end($eks_bukti_up_twibbon_ketua));
 
     if (!in_array($eks_bukti_up_twibbon_ketua, $ekstensi) || $sze_bukti_up_twibbon_ketua > $maksimal) {
-
-        return false;
-    }
-
-    if ($sze_bukti_up_twibbon_ketua > $maksimal) {
-
         return false;
     }
 
@@ -190,12 +159,6 @@ function up_ktm_anggota()
     $eks_ktm_anggota = strtolower(end($eks_ktm_anggota));
 
     if (!in_array($eks_ktm_anggota, $ekstensi) || $sze_ktm_anggota > $maksimal) {
-
-        return false;
-    }
-
-    if ($sze_ktm_anggota > $maksimal) {
-
         return false;
     }
 
@@ -218,18 +181,11 @@ function up_bukti_up_twibbon_anggota()
     $tmp_bukti_up_twibbon_anggota = $_FILES["bukti_up_twibbon_anggota"]["tmp_name"];
     $sze_bukti_up_twibbon_anggota = $_FILES["bukti_up_twibbon_anggota"]["size"];
 
-
     // cek ekstensi
     $eks_bukti_up_twibbon_anggota = explode('.', $nama_bukti_up_twibbon_anggota);
     $eks_bukti_up_twibbon_anggota = strtolower(end($eks_bukti_up_twibbon_anggota));
 
     if (!in_array($eks_bukti_up_twibbon_anggota, $ekstensi) || $sze_bukti_up_twibbon_anggota > $maksimal) {
-
-        return false;
-    }
-
-    if ($sze_bukti_up_twibbon_anggota > $maksimal) {
-
         return false;
     }
 
@@ -242,4 +198,18 @@ function up_bukti_up_twibbon_anggota()
     move_uploaded_file($tmp_bukti_up_twibbon_anggota, 'assets/unggah/bukti_up_twibbon_anggota/' . $nama_bukti_up_twibbon_anggota_baru);
 
     return $nama_bukti_up_twibbon_anggota_baru;
+}
+
+function cari($keyword)
+{
+    $query = "SELECT * FROM peserta_mrc WHERE 
+            nama_tim LIKE '%$keyword%' OR 
+            nama_instansi LIKE '%$keyword%' OR
+            nama_pembina LIKE '%$keyword%' OR
+            nama_ketua LIKE '%$keyword%' OR
+            email_ketua LIKE '%$keyword%' OR
+            nomor_whatsapp_ketua LIKE '%$keyword%' OR
+            nama_anggota LIKE '%$keyword%'
+            ";
+    return query($query);
 }
