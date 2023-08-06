@@ -97,7 +97,6 @@ function daftar($data)
     $nama_bukti_up_twibbon_anggota_baru .= $eks_bukti_up_twibbon_anggota;
     // bukti up twibbon anggota end
 
-
     // cek ekstensi
     if (!in_array($eks_bukti_pembayaran, $ekstensi)) {
         $error = "Pastikan ekstensi file jpg, jpeg, png atau pdf ! ";
@@ -141,13 +140,6 @@ function daftar($data)
         die;
     }
 
-    // upload gambar file
-    move_uploaded_file($tmp_bukti_pembayaran, 'assets/unggah/bukti_pembayaran/' . $nama_bukti_pembayaran_baru);
-    move_uploaded_file($tmp_ktm_ketua, 'assets/unggah/ktm_ketua/' . $nama_ktm_ketua_baru);
-    move_uploaded_file($tmp_bukti_up_twibbon_ketua, 'assets/unggah/bukti_up_twibbon_ketua/' . $nama_bukti_up_twibbon_ketua_baru);
-    move_uploaded_file($tmp_ktm_anggota, 'assets/unggah/ktm_anggota/' . $nama_ktm_anggota_baru);
-    move_uploaded_file($tmp_bukti_up_twibbon_anggota, 'assets/unggah/bukti_up_twibbon_anggota/' . $nama_bukti_up_twibbon_anggota_baru);
-
     $bukti_pembayaran = $nama_bukti_pembayaran_baru;
     $ktm_ketua = $nama_ktm_ketua_baru;
     $bukti_up_twibbon_ketua = $nama_bukti_up_twibbon_ketua_baru;
@@ -169,6 +161,13 @@ function daftar($data)
               '$bukti_up_twibbon_anggota'
             )";
     mysqli_query($conn, $query);
+
+    // upload gambar file
+    move_uploaded_file($tmp_bukti_pembayaran, 'assets/unggah/bukti_pembayaran/' . $nama_bukti_pembayaran_baru);
+    move_uploaded_file($tmp_ktm_ketua, 'assets/unggah/ktm_ketua/' . $nama_ktm_ketua_baru);
+    move_uploaded_file($tmp_bukti_up_twibbon_ketua, 'assets/unggah/bukti_up_twibbon_ketua/' . $nama_bukti_up_twibbon_ketua_baru);
+    move_uploaded_file($tmp_ktm_anggota, 'assets/unggah/ktm_anggota/' . $nama_ktm_anggota_baru);
+    move_uploaded_file($tmp_bukti_up_twibbon_anggota, 'assets/unggah/bukti_up_twibbon_anggota/' . $nama_bukti_up_twibbon_anggota_baru);
 
     return mysqli_affected_rows($conn);
 }
