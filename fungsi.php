@@ -1,8 +1,8 @@
 <?php
 
 // konek database
-// $conn = mysqli_connect("localhost", "root", "", "event_mrc");
-$conn = mysqli_connect("localhost", "event_mrc", "MRC@CY!WSVQuNuzlWkVzXP5g", "event_mrc");
+$conn = mysqli_connect("localhost", "root", "", "event_mrc");
+// $conn = mysqli_connect("localhost", "event_mrc", "MRC@CY!WSVQuNuzlWkVzXP5g", "event_mrc");
 
 // variabel
 $ekstensi = ['jpg', 'jpeg', 'png', 'pdf'];
@@ -37,6 +37,9 @@ function daftar($data)
     $ktm_anggota = up_ktm_anggota();
     $bukti_up_twibbon_anggota = up_bukti_up_twibbon_anggota();
 
+    $error = "";
+
+
     if (
         !$bukti_pembayaran ||
         !$ktm_ketua ||
@@ -44,7 +47,8 @@ function daftar($data)
         !$ktm_anggota ||
         !$bukti_up_twibbon_anggota
     ) {
-        return false;
+        $error = "Gagal mendaftar di MRC 2023 ! </br>Pastikan ekstensi file jpg, jpeg, png atau pdf maksimal 1MB !";
+        return $error;
     }
 
     $query = "INSERT INTO peserta_mrc VALUES ('',

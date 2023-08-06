@@ -3,26 +3,41 @@
 // konek database
 require "fungsi.php";
 
+$error = "";
+
 // cek tombol kirim
 if (isset($_POST["kirim"])) {
 
-    // cek perubahan data di database
-    if (daftar($_POST) > 0) {
-        echo    '
-                    <script>
-                        alert("Berhasil mendaftar di MRC 2023 !");
-                        document.location.href = "https://chat.whatsapp.com/BcvSS6QzrZFHr2PKZRVj41"; 
-                    </script>
-                ';
+    // var_dump(daftar($_POST));
+
+    if (daftar($_POST) === 1) {
+        header("Location:https://chat.whatsapp.com/BcvSS6QzrZFHr2PKZRVj41");
+        $error = "Berhasil mendaftar sebagai admin MRC 2023";
     } else {
-        echo    '
-                    <script>
-                        alert("Gagal mendaftar di MRC 2023 \n\nPastikan ekstensi file jpg, jpeg, png atau pdf maksimal 1MB !");
-                        document.location.href = "daftar.php"; 
-                    </script>
-                ';
+        $error = daftar($_POST);
     }
 }
+
+// cek tombol kirim
+// if (isset($_POST["kirim"])) {
+
+//     // cek perubahan data di database
+//     if (daftar($_POST) > 0) {
+//         echo    '
+//                     <script>
+//                         alert("Berhasil mendaftar di MRC 2023 !");
+//                         document.location.href = "https://chat.whatsapp.com/BcvSS6QzrZFHr2PKZRVj41"; 
+//                     </script>
+//                 ';
+//     } else {
+//         echo    '
+//                     <script>
+//                         alert("Gagal mendaftar di MRC 2023 \n\nPastikan ekstensi file jpg, jpeg, png atau pdf maksimal 1MB !");
+//                         document.location.href = "daftar.php"; 
+//                     </script>
+//                 ';
+//     }
+// }
 
 ?>
 
@@ -62,6 +77,14 @@ if (isset($_POST["kirim"])) {
             <!-- Kontent start -->
             <div class="content">
                 <form action="" method="post" enctype="multipart/form-data">
+
+                    <!-- Error start -->
+                    <div style="text-align: end; color: red; font-size: 0.7rem">
+                        <?php echo  $error = (isset($error)) ? $error : ''; ?></div>
+                    <div style="text-align: end; color: green; font-size: 0.7rem">
+                        <?php echo  $notif = (isset($notif)) ? $notif : ''; ?></div>
+                    <!-- Error end -->
+
                     <!-- Nama tim start -->
                     <div class="nama-tim input"><label for="nama-tim">Nama Tim</label><input autofocus autocomplete="off" required type="text" placeholder="Masukkan Nama Tim" id="nama-tim" name="nama_tim" /></div>
                     <!-- Nama tim end -->
