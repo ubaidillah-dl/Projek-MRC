@@ -99,26 +99,43 @@ function daftar($data)
 
 
     // cek ekstensi
-    if (
-        !in_array($eks_bukti_pembayaran, $ekstensi) ||
-        !in_array($eks_ktm_ketua, $ekstensi) ||
-        !in_array($eks_bukti_up_twibbon_ketua, $ekstensi) ||
-        !in_array($eks_ktm_anggota, $ekstensi) ||
-        !in_array($eks_bukti_up_twibbon_anggota, $ekstensi)
-    ) {
+    if (!in_array($eks_bukti_pembayaran, $ekstensi)) {
+        $error = "Pastikan ekstensi file jpg, jpeg, png atau pdf ! ";
+        return $error;
+        die;
+    } elseif (!in_array($eks_ktm_ketua, $ekstensi)) {
+        $error = "Pastikan ekstensi file jpg, jpeg, png atau pdf ! ";
+        return $error;
+        die;
+    } elseif (!in_array($eks_bukti_up_twibbon_ketua, $ekstensi)) {
+        $error = "Pastikan ekstensi file jpg, jpeg, png atau pdf ! ";
+        return $error;
+        die;
+    } elseif (!in_array($eks_ktm_anggota, $ekstensi)) {
+        $error = "Pastikan ekstensi file jpg, jpeg, png atau pdf ! ";
+        return $error;
+        die;
+    } elseif (!in_array($eks_bukti_up_twibbon_anggota, $ekstensi)) {
         $error = "Pastikan ekstensi file jpg, jpeg, png atau pdf ! ";
         return $error;
         die;
     }
 
     // cek ukuran
-    if (
-        $sze_bukti_pembayaran > $maksimal ||
-        $sze_ktm_ketua > $maksimal ||
-        $sze_bukti_up_twibbon_ketua > $maksimal ||
-        $sze_ktm_anggota > $maksimal ||
-        $sze_bukti_up_twibbon_anggota > $maksimal
-    ) {
+    if ($sze_bukti_pembayaran > $maksimal) {
+    } elseif ($sze_ktm_ketua > $maksimal) {
+        $error = "Ukuran file maksimal 1 MB ! ";
+        return $error;
+        die;
+    } elseif ($sze_bukti_up_twibbon_ketua > $maksimal) {
+        $error = "Ukuran file maksimal 1 MB ! ";
+        return $error;
+        die;
+    } elseif ($sze_ktm_anggota > $maksimal) {
+        $error = "Ukuran file maksimal 1 MB ! ";
+        return $error;
+        die;
+    } elseif ($sze_bukti_up_twibbon_anggota > $maksimal) {
         $error = "Ukuran file maksimal 1 MB ! ";
         return $error;
         die;
