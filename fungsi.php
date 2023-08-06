@@ -118,7 +118,7 @@ function up_ktm_ketua()
     $eks_ktm_ketua = explode('.', $nama_ktm_ketua);
     $eks_ktm_ketua = strtolower(end($eks_ktm_ketua));
 
-    if (!in_array($eks_ktm_ketua, $ekstensi) || ($sze_ktm_ketua > $maksimal)) {
+    if (!in_array($eks_ktm_ketua, $ekstensi) || $sze_ktm_ketua > $maksimal) {
         return false;
     }
 
@@ -145,7 +145,7 @@ function up_bukti_up_twibbon_ketua()
     $eks_bukti_up_twibbon_ketua = explode('.', $nama_bukti_up_twibbon_ketua);
     $eks_bukti_up_twibbon_ketua = strtolower(end($eks_bukti_up_twibbon_ketua));
 
-    if (!in_array($eks_bukti_up_twibbon_ketua, $ekstensi) || ($sze_bukti_up_twibbon_ketua > $maksimal)) {
+    if (!in_array($eks_bukti_up_twibbon_ketua, $ekstensi) || $sze_bukti_up_twibbon_ketua > $maksimal) {
         return false;
     }
 
@@ -172,7 +172,7 @@ function up_ktm_anggota()
     $eks_ktm_anggota = explode('.', $nama_ktm_anggota);
     $eks_ktm_anggota = strtolower(end($eks_ktm_anggota));
 
-    if (!in_array($eks_ktm_anggota, $ekstensi) || ($sze_ktm_anggota > $maksimal)) {
+    if (!in_array($eks_ktm_anggota, $ekstensi) || $sze_ktm_anggota > $maksimal) {
         return false;
     }
 
@@ -200,7 +200,7 @@ function up_bukti_up_twibbon_anggota()
     $eks_bukti_up_twibbon_anggota = explode('.', $nama_bukti_up_twibbon_anggota);
     $eks_bukti_up_twibbon_anggota = strtolower(end($eks_bukti_up_twibbon_anggota));
 
-    if (!in_array($eks_bukti_up_twibbon_anggota, $ekstensi) || ($sze_bukti_up_twibbon_anggota > $maksimal)) {
+    if (!in_array($eks_bukti_up_twibbon_anggota, $ekstensi) || $sze_bukti_up_twibbon_anggota > $maksimal) {
         return false;
     }
 
