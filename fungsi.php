@@ -43,6 +43,13 @@ function daftar($data)
         !$ktm_anggota ||
         !$bukti_up_twibbon_anggota
     ) {
+        echo    '
+                    <script>
+                        alert("Gagal mendaftar di MRC 2023 \n\nPastikan ekstensi file jpg, jpeg, png atau pdf maksimal 1MB !");
+                        document.location.href = "daftar.php"; 
+                    </script>
+                ';
+
         return false;
     }
 

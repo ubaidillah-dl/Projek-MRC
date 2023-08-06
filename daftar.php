@@ -11,14 +11,15 @@ if (isset($_POST["kirim"])) {
                             document.location.href = "https://chat.whatsapp.com/BcvSS6QzrZFHr2PKZRVj41"; 
                         </script>
                     ';
-    } else {
-        echo    '
-                    <script>
-                        alert("Gagal mendaftar di MRC 2023 \n\nPastikan ekstensi file jpg, jpeg, png atau pdf maksimal 1MB !");
-                        document.location.href = "daftar.php"; 
-                    </script>
-                ';
     }
+    //  else {
+    //     echo    '
+    //                 <script>
+    //                     alert("Gagal mendaftar di MRC 2023 \n\nPastikan ekstensi file jpg, jpeg, png atau pdf maksimal 1MB !");
+    //                     document.location.href = "daftar.php"; 
+    //                 </script>
+    //             ';
+    // }
 }
 
 ?>
