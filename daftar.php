@@ -3,7 +3,6 @@
 require "fungsi.php";
 
 if (isset($_POST["kirim"])) {
-    // if (validasi($_POST)) {
 
     if (daftar($_POST) > 0) {
         echo    '
@@ -20,7 +19,6 @@ if (isset($_POST["kirim"])) {
                     </script>
                 ';
     }
-    // }
 }
 
 ?>
