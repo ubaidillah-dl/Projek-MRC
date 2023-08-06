@@ -35,7 +35,7 @@ function daftar($data)
     // bukti pembayaran start   
     $nama_bukti_pembayaran = $_FILES["bukti_pembayaran"]["name"];
     $tmp_bukti_pembayaran = $_FILES["bukti_pembayaran"]["tmp_name"];
-    $sze_bukti_pembayaran = $_FILES["bukti_pembayaran"]["size"];
+    // $sze_bukti_pembayaran = $_FILES["bukti_pembayaran"]["size"];
 
     $eks_bukti_pembayaran = explode('.', $nama_bukti_pembayaran);
     $eks_bukti_pembayaran = strtolower(end($eks_bukti_pembayaran));
@@ -48,7 +48,7 @@ function daftar($data)
     // ktm ketua start
     $nama_ktm_ketua = $_FILES["ktm_ketua"]["name"];
     $tmp_ktm_ketua = $_FILES["ktm_ketua"]["tmp_name"];
-    $sze_ktm_ketua = $_FILES["ktm_ketua"]["size"];
+    // $sze_ktm_ketua = $_FILES["ktm_ketua"]["size"];
 
     $eks_ktm_ketua = explode('.', $nama_ktm_ketua);
     $eks_ktm_ketua = strtolower(end($eks_ktm_ketua));
@@ -61,7 +61,7 @@ function daftar($data)
     // bukti up twibbon ketua start
     $nama_bukti_up_twibbon_ketua = $_FILES["bukti_up_twibbon_ketua"]["name"];
     $tmp_bukti_up_twibbon_ketua = $_FILES["bukti_up_twibbon_ketua"]["tmp_name"];
-    $sze_bukti_up_twibbon_ketua = $_FILES["bukti_up_twibbon_ketua"]["size"];
+    // $sze_bukti_up_twibbon_ketua = $_FILES["bukti_up_twibbon_ketua"]["size"];
 
     $eks_bukti_up_twibbon_ketua = explode('.', $nama_bukti_up_twibbon_ketua);
     $eks_bukti_up_twibbon_ketua = strtolower(end($eks_bukti_up_twibbon_ketua));
@@ -74,7 +74,7 @@ function daftar($data)
     // ktm anggota start
     $nama_ktm_anggota = $_FILES["ktm_anggota"]["name"];
     $tmp_ktm_anggota = $_FILES["ktm_anggota"]["tmp_name"];
-    $sze_ktm_anggota = $_FILES["ktm_anggota"]["size"];
+    // $sze_ktm_anggota = $_FILES["ktm_anggota"]["size"];
 
     $eks_ktm_anggota = explode('.', $nama_ktm_anggota);
     $eks_ktm_anggota = strtolower(end($eks_ktm_anggota));
@@ -87,7 +87,7 @@ function daftar($data)
     // bukti up twibbon anggota start
     $nama_bukti_up_twibbon_anggota = $_FILES["bukti_up_twibbon_anggota"]["name"];
     $tmp_bukti_up_twibbon_anggota = $_FILES["bukti_up_twibbon_anggota"]["tmp_name"];
-    $sze_bukti_up_twibbon_anggota = $_FILES["bukti_up_twibbon_anggota"]["size"];
+    // $sze_bukti_up_twibbon_anggota = $_FILES["bukti_up_twibbon_anggota"]["size"];
 
     $eks_bukti_up_twibbon_anggota = explode('.', $nama_bukti_up_twibbon_anggota);
     $eks_bukti_up_twibbon_anggota = strtolower(end($eks_bukti_up_twibbon_anggota));
@@ -121,24 +121,24 @@ function daftar($data)
     }
 
     // cek ukuran
-    if ($sze_bukti_pembayaran > $maksimal) {
-    } elseif ($sze_ktm_ketua > $maksimal) {
-        $error = "Ukuran file maksimal 1 MB ! ";
-        return $error;
-        die;
-    } elseif ($sze_bukti_up_twibbon_ketua > $maksimal) {
-        $error = "Ukuran file maksimal 1 MB ! ";
-        return $error;
-        die;
-    } elseif ($sze_ktm_anggota > $maksimal) {
-        $error = "Ukuran file maksimal 1 MB ! ";
-        return $error;
-        die;
-    } elseif ($sze_bukti_up_twibbon_anggota > $maksimal) {
-        $error = "Ukuran file maksimal 1 MB ! ";
-        return $error;
-        die;
-    }
+    // if ($sze_bukti_pembayaran > $maksimal) {
+    // } elseif ($sze_ktm_ketua > $maksimal) {
+    //     $error = "Ukuran file maksimal 1 MB ! ";
+    //     return $error;
+    //     die;
+    // } elseif ($sze_bukti_up_twibbon_ketua > $maksimal) {
+    //     $error = "Ukuran file maksimal 1 MB ! ";
+    //     return $error;
+    //     die;
+    // } elseif ($sze_ktm_anggota > $maksimal) {
+    //     $error = "Ukuran file maksimal 1 MB ! ";
+    //     return $error;
+    //     die;
+    // } elseif ($sze_bukti_up_twibbon_anggota > $maksimal) {
+    //     $error = "Ukuran file maksimal 1 MB ! ";
+    //     return $error;
+    //     die;
+    // }
 
     $bukti_pembayaran = $nama_bukti_pembayaran_baru;
     $ktm_ketua = $nama_ktm_ketua_baru;
