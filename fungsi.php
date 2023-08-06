@@ -21,8 +21,7 @@ function query($query)
 
 function daftar($data)
 {
-    global $conn, $ekstensi, $maksimal;
-    $error = "";
+    global $conn;
 
     $nama_tim = htmlspecialchars($data["nama_tim"]);
     $nama_instansi = htmlspecialchars($data["nama_instansi"]);
@@ -32,119 +31,21 @@ function daftar($data)
     $nomor_whatsapp_ketua = htmlspecialchars($data["nomor_whatsapp_ketua"]);
     $nama_anggota = htmlspecialchars($data["nama_anggota"]);
 
-    // bukti pembayaran start   
-    $nama_bukti_pembayaran = $_FILES["bukti_pembayaran"]["name"];
-    $tmp_bukti_pembayaran = $_FILES["bukti_pembayaran"]["tmp_name"];
-    // $sze_bukti_pembayaran = $_FILES["bukti_pembayaran"]["size"];
+    $bukti_pembayaran = up_bukti_pembayaran();
+    $ktm_ketua = up_ktm_ketua();
+    $bukti_up_twibbon_ketua = up_bukti_up_twibbon_ketua();
+    $ktm_anggota = up_ktm_anggota();
+    $bukti_up_twibbon_anggota = up_bukti_up_twibbon_anggota();
 
-    $eks_bukti_pembayaran = explode('.', $nama_bukti_pembayaran);
-    $eks_bukti_pembayaran = strtolower(end($eks_bukti_pembayaran));
-
-    $nama_bukti_pembayaran_baru = uniqid('', true);
-    $nama_bukti_pembayaran_baru .= '.';
-    $nama_bukti_pembayaran_baru .= $eks_bukti_pembayaran;
-    // bukti pembayaran end   
-
-    // ktm ketua start
-    $nama_ktm_ketua = $_FILES["ktm_ketua"]["name"];
-    $tmp_ktm_ketua = $_FILES["ktm_ketua"]["tmp_name"];
-    // $sze_ktm_ketua = $_FILES["ktm_ketua"]["size"];
-
-    $eks_ktm_ketua = explode('.', $nama_ktm_ketua);
-    $eks_ktm_ketua = strtolower(end($eks_ktm_ketua));
-
-    $nama_ktm_ketua_baru = uniqid('', true);
-    $nama_ktm_ketua_baru .= '.';
-    $nama_ktm_ketua_baru .= $eks_ktm_ketua;
-    // ktm ketua end
-
-    // bukti up twibbon ketua start
-    $nama_bukti_up_twibbon_ketua = $_FILES["bukti_up_twibbon_ketua"]["name"];
-    $tmp_bukti_up_twibbon_ketua = $_FILES["bukti_up_twibbon_ketua"]["tmp_name"];
-    // $sze_bukti_up_twibbon_ketua = $_FILES["bukti_up_twibbon_ketua"]["size"];
-
-    $eks_bukti_up_twibbon_ketua = explode('.', $nama_bukti_up_twibbon_ketua);
-    $eks_bukti_up_twibbon_ketua = strtolower(end($eks_bukti_up_twibbon_ketua));
-
-    $nama_bukti_up_twibbon_ketua_baru = uniqid('', true);
-    $nama_bukti_up_twibbon_ketua_baru .= '.';
-    $nama_bukti_up_twibbon_ketua_baru .= $eks_bukti_up_twibbon_ketua;
-    // bukti up twibbon ketua end
-
-    // ktm anggota start
-    $nama_ktm_anggota = $_FILES["ktm_anggota"]["name"];
-    $tmp_ktm_anggota = $_FILES["ktm_anggota"]["tmp_name"];
-    // $sze_ktm_anggota = $_FILES["ktm_anggota"]["size"];
-
-    $eks_ktm_anggota = explode('.', $nama_ktm_anggota);
-    $eks_ktm_anggota = strtolower(end($eks_ktm_anggota));
-
-    $nama_ktm_anggota_baru = uniqid('', true);
-    $nama_ktm_anggota_baru .= '.';
-    $nama_ktm_anggota_baru .= $eks_ktm_anggota;
-    // ktm anggota end
-
-    // bukti up twibbon anggota start
-    $nama_bukti_up_twibbon_anggota = $_FILES["bukti_up_twibbon_anggota"]["name"];
-    $tmp_bukti_up_twibbon_anggota = $_FILES["bukti_up_twibbon_anggota"]["tmp_name"];
-    // $sze_bukti_up_twibbon_anggota = $_FILES["bukti_up_twibbon_anggota"]["size"];
-
-    $eks_bukti_up_twibbon_anggota = explode('.', $nama_bukti_up_twibbon_anggota);
-    $eks_bukti_up_twibbon_anggota = strtolower(end($eks_bukti_up_twibbon_anggota));
-
-    $nama_bukti_up_twibbon_anggota_baru = uniqid('', true);
-    $nama_bukti_up_twibbon_anggota_baru .= '.';
-    $nama_bukti_up_twibbon_anggota_baru .= $eks_bukti_up_twibbon_anggota;
-    // bukti up twibbon anggota end
-
-    // cek ekstensi
-    if (!in_array($eks_bukti_pembayaran, $ekstensi)) {
-        $error = "Pastikan ekstensi file jpg, jpeg, png atau pdf ! ";
-        return $error;
-        die;
-    } elseif (!in_array($eks_ktm_ketua, $ekstensi)) {
-        $error = "Pastikan ekstensi file jpg, jpeg, png atau pdf ! ";
-        return $error;
-        die;
-    } elseif (!in_array($eks_bukti_up_twibbon_ketua, $ekstensi)) {
-        $error = "Pastikan ekstensi file jpg, jpeg, png atau pdf ! ";
-        return $error;
-        die;
-    } elseif (!in_array($eks_ktm_anggota, $ekstensi)) {
-        $error = "Pastikan ekstensi file jpg, jpeg, png atau pdf ! ";
-        return $error;
-        die;
-    } elseif (!in_array($eks_bukti_up_twibbon_anggota, $ekstensi)) {
-        $error = "Pastikan ekstensi file jpg, jpeg, png atau pdf ! ";
-        return $error;
-        die;
+    if (
+        !$bukti_pembayaran ||
+        !$ktm_ketua ||
+        !$bukti_up_twibbon_ketua ||
+        !$ktm_anggota ||
+        !$bukti_up_twibbon_anggota
+    ) {
+        return false;
     }
-
-    // cek ukuran
-    // if ($sze_bukti_pembayaran > $maksimal) {
-    // } elseif ($sze_ktm_ketua > $maksimal) {
-    //     $error = "Ukuran file maksimal 1 MB ! ";
-    //     return $error;
-    //     die;
-    // } elseif ($sze_bukti_up_twibbon_ketua > $maksimal) {
-    //     $error = "Ukuran file maksimal 1 MB ! ";
-    //     return $error;
-    //     die;
-    // } elseif ($sze_ktm_anggota > $maksimal) {
-    //     $error = "Ukuran file maksimal 1 MB ! ";
-    //     return $error;
-    //     die;
-    // } elseif ($sze_bukti_up_twibbon_anggota > $maksimal) {
-    //     $error = "Ukuran file maksimal 1 MB ! ";
-    //     return $error;
-    //     die;
-    // }
-
-    $bukti_pembayaran = $nama_bukti_pembayaran_baru;
-    $ktm_ketua = $nama_ktm_ketua_baru;
-    $bukti_up_twibbon_ketua = $nama_bukti_up_twibbon_ketua_baru;
-    $ktm_anggota = $nama_ktm_anggota_baru;
-    $bukti_up_twibbon_anggota = $nama_bukti_up_twibbon_anggota_baru;
 
     $query = "INSERT INTO peserta_mrc VALUES ('',
               '$nama_tim',
@@ -162,14 +63,142 @@ function daftar($data)
             )";
     mysqli_query($conn, $query);
 
-    // upload gambar file
+    return mysqli_affected_rows($conn);
+}
+
+function up_bukti_pembayaran()
+{
+    global $ekstensi, $maksimal;
+
+    $nama_bukti_pembayaran = $_FILES["bukti_pembayaran"]["name"];
+    $tmp_bukti_pembayaran = $_FILES["bukti_pembayaran"]["tmp_name"];
+    $sze_bukti_pembayaran = $_FILES["bukti_pembayaran"]["size"];
+
+    // cek ekstensi 
+    $eks_bukti_pembayaran = explode('.', $nama_bukti_pembayaran);
+    $eks_bukti_pembayaran = strtolower(end($eks_bukti_pembayaran));
+
+    if (!in_array($eks_bukti_pembayaran, $ekstensi) || $sze_bukti_pembayaran > $maksimal) {
+        return false;
+    }
+
+    // buat nama baru random
+    $nama_bukti_pembayaran_baru = uniqid('', true);
+    $nama_bukti_pembayaran_baru .= '.';
+    $nama_bukti_pembayaran_baru .= $eks_bukti_pembayaran;
+
+    // upload gambar
     move_uploaded_file($tmp_bukti_pembayaran, 'assets/unggah/bukti_pembayaran/' . $nama_bukti_pembayaran_baru);
+
+    return $nama_bukti_pembayaran_baru;
+}
+
+function up_ktm_ketua()
+{
+    global $ekstensi, $maksimal;
+
+    $nama_ktm_ketua = $_FILES["ktm_ketua"]["name"];
+    $tmp_ktm_ketua = $_FILES["ktm_ketua"]["tmp_name"];
+    $sze_ktm_ketua = $_FILES["ktm_ketua"]["size"];
+
+    // cek ekstensi
+    $eks_ktm_ketua = explode('.', $nama_ktm_ketua);
+    $eks_ktm_ketua = strtolower(end($eks_ktm_ketua));
+
+    if (!in_array($eks_ktm_ketua, $ekstensi) || $sze_ktm_ketua > $maksimal) {
+        return false;
+    }
+
+    // buat nama baru random
+    $nama_ktm_ketua_baru = uniqid('', true);
+    $nama_ktm_ketua_baru .= '.';
+    $nama_ktm_ketua_baru .= $eks_ktm_ketua;
+
+    // upload gambar
     move_uploaded_file($tmp_ktm_ketua, 'assets/unggah/ktm_ketua/' . $nama_ktm_ketua_baru);
+
+    return $nama_ktm_ketua_baru;
+}
+
+function up_bukti_up_twibbon_ketua()
+{
+    global $ekstensi, $maksimal;
+
+    $nama_bukti_up_twibbon_ketua = $_FILES["bukti_up_twibbon_ketua"]["name"];
+    $tmp_bukti_up_twibbon_ketua = $_FILES["bukti_up_twibbon_ketua"]["tmp_name"];
+    $sze_bukti_up_twibbon_ketua = $_FILES["bukti_up_twibbon_ketua"]["size"];
+
+    // cek ekstensi
+    $eks_bukti_up_twibbon_ketua = explode('.', $nama_bukti_up_twibbon_ketua);
+    $eks_bukti_up_twibbon_ketua = strtolower(end($eks_bukti_up_twibbon_ketua));
+
+    if (!in_array($eks_bukti_up_twibbon_ketua, $ekstensi) || $sze_bukti_up_twibbon_ketua > $maksimal) {
+        return false;
+    }
+
+    // buat nama baru random
+    $nama_bukti_up_twibbon_ketua_baru = uniqid('', true);
+    $nama_bukti_up_twibbon_ketua_baru .= '.';
+    $nama_bukti_up_twibbon_ketua_baru .= $eks_bukti_up_twibbon_ketua;
+
+    // upload gambar
     move_uploaded_file($tmp_bukti_up_twibbon_ketua, 'assets/unggah/bukti_up_twibbon_ketua/' . $nama_bukti_up_twibbon_ketua_baru);
+
+    return $nama_bukti_up_twibbon_ketua_baru;
+}
+
+function up_ktm_anggota()
+{
+    global $ekstensi, $maksimal;
+
+    $nama_ktm_anggota = $_FILES["ktm_anggota"]["name"];
+    $tmp_ktm_anggota = $_FILES["ktm_anggota"]["tmp_name"];
+    $sze_ktm_anggota = $_FILES["ktm_anggota"]["size"];
+
+    // cek ekstensi
+    $eks_ktm_anggota = explode('.', $nama_ktm_anggota);
+    $eks_ktm_anggota = strtolower(end($eks_ktm_anggota));
+
+    if (!in_array($eks_ktm_anggota, $ekstensi) || $sze_ktm_anggota > $maksimal) {
+        return false;
+    }
+
+    // buat nama baru random
+    $nama_ktm_anggota_baru = uniqid('', true);
+    $nama_ktm_anggota_baru .= '.';
+    $nama_ktm_anggota_baru .= $eks_ktm_anggota;
+
+    // upload gambar
     move_uploaded_file($tmp_ktm_anggota, 'assets/unggah/ktm_anggota/' . $nama_ktm_anggota_baru);
+
+    return $nama_ktm_anggota_baru;
+}
+
+function up_bukti_up_twibbon_anggota()
+{
+    global $ekstensi, $maksimal;
+
+    $nama_bukti_up_twibbon_anggota = $_FILES["bukti_up_twibbon_anggota"]["name"];
+    $tmp_bukti_up_twibbon_anggota = $_FILES["bukti_up_twibbon_anggota"]["tmp_name"];
+    $sze_bukti_up_twibbon_anggota = $_FILES["bukti_up_twibbon_anggota"]["size"];
+
+    // cek ekstensi
+    $eks_bukti_up_twibbon_anggota = explode('.', $nama_bukti_up_twibbon_anggota);
+    $eks_bukti_up_twibbon_anggota = strtolower(end($eks_bukti_up_twibbon_anggota));
+
+    if (!in_array($eks_bukti_up_twibbon_anggota, $ekstensi) || $sze_bukti_up_twibbon_anggota > $maksimal) {
+        return false;
+    }
+
+    // buat nama baru random
+    $nama_bukti_up_twibbon_anggota_baru = uniqid('', true);
+    $nama_bukti_up_twibbon_anggota_baru .= '.';
+    $nama_bukti_up_twibbon_anggota_baru .= $eks_bukti_up_twibbon_anggota;
+
+    // upload gambar
     move_uploaded_file($tmp_bukti_up_twibbon_anggota, 'assets/unggah/bukti_up_twibbon_anggota/' . $nama_bukti_up_twibbon_anggota_baru);
 
-    return mysqli_affected_rows($conn);
+    return $nama_bukti_up_twibbon_anggota_baru;
 }
 
 function cari($keyword)
