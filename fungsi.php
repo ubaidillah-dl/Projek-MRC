@@ -4,6 +4,7 @@
 // $conn = mysqli_connect("localhost", "root", "", "event_mrc");
 $conn = mysqli_connect("localhost", "event_mrc", "MRC@CY!WSVQuNuzlWkVzXP5g", "event_mrc");
 
+// variabel
 $ekstensi = ['jpg', 'jpeg', 'png', 'pdf'];
 $maksimal = 1000000;
 
@@ -73,7 +74,7 @@ function up_bukti_pembayaran()
     $tmp_bukti_pembayaran = $_FILES["bukti_pembayaran"]["tmp_name"];
     $sze_bukti_pembayaran = $_FILES["bukti_pembayaran"]["size"];
 
-    // cek ekstensi
+    // cek ekstensi 
     $eks_bukti_pembayaran = explode('.', $nama_bukti_pembayaran);
     $eks_bukti_pembayaran = strtolower(end($eks_bukti_pembayaran));
 

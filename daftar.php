@@ -1,16 +1,19 @@
 <?php
 
+// konek database
 require "fungsi.php";
 
+// cek tombol kirim
 if (isset($_POST["kirim"])) {
 
+    // cek perubahan data di database
     if (daftar($_POST) > 0) {
         echo    '
-        <script>
-        alert("Berhasil mendaftar di MRC 2023 !");
-        document.location.href = "https://chat.whatsapp.com/BcvSS6QzrZFHr2PKZRVj41"; 
-        </script>
-        ';
+                    <script>
+                        alert("Berhasil mendaftar di MRC 2023 !");
+                        document.location.href = "https://chat.whatsapp.com/BcvSS6QzrZFHr2PKZRVj41"; 
+                    </script>
+                ';
     } else {
         echo    '
                     <script>
