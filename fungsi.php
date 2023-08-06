@@ -214,3 +214,64 @@ function cari($keyword)
             ";
     return query($query);
 }
+
+function daftar_admin($data)
+{
+    global $conn;
+
+    $nama = $data["nama"];
+    $nim = $data["nim"];
+    $password = mysqli_real_escape_string($conn, $data["password"]);
+    $konfirmasi_password = mysqli_real_escape_string($conn, $data["konfirmasi_password"]);
+    $error = "";
+    // cek nim apa sudah terdaftar
+    $result = mysqli_query($conn, "SELECT nim FROM admin_mrc WHERE nim = '$nim'");
+    if (mysqli_fetch_assoc($result)) {
+        $error = "NIM sudah terdaftar di admin MRC 2023 !";
+        return $error;
+        die;
+    }
+
+    // cek password dan konfirmasinya
+    if ($password !== $konfirmasi_password) {
+        $error = "Konfirmasi password tidak sama !";
+        return $error;
+        die;
+    }
+
+    // ekripsi password
+    $password = password_hash($password, PASSWORD_DEFAULT);
+
+    mysqli_query($conn, "INSERT INTO admin_mrc VALUES ('', '$nama', '$nim', '$password')");
+
+    return mysqli_affected_rows($conn);
+}
+
+function masuk_admin($data)
+{
+
+    global $conn;
+
+    $nim = $data["nim"];
+    $password = $data["password"];
+
+    // cek nim
+    $result = mysqli_query($conn, "SELECT * FROM admin_mrc WHERE nim = '$nim'");
+
+    if (mysqli_num_rows($result) === 1) {
+
+        $row = mysqli_fetch_assoc($result);
+
+        if (password_verify($password, $row["password"])) {
+            $_SESSION["masuk"] = true;
+
+            header("Location:halaman_admin.php");
+        } else {
+            $error = "Password salah !";
+        }
+    } else {
+        $error = "NIM belum terdaftar sebagai admin MRC 2023 !";
+    }
+
+    return $error;
+}

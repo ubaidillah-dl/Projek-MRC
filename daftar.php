@@ -120,7 +120,7 @@ if (isset($_POST["kirim"])) {
                     </div>
                     <!-- Bukti up twibbon anggota end -->
 
-                    <button type="submit" name="kirim">Kirim</button>
+                    <button type="submit" name="kirim">Daftar</button>
                 </form>
             </div>
             <!-- Kontent end -->
