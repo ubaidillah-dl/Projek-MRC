@@ -76,6 +76,19 @@ body {
   justify-content: space-between;
 }
 
+.daftar-lomba .row .content .noted {
+  color: #575757;
+  background-color: #eee;
+  border-radius: 10px;
+  padding: 0.5rem 5%;
+  margin-bottom: 1rem;
+}
+
+.daftar-lomba .row .content .noted span {
+  font-size: 0.8rem;
+  text-decoration: underline;
+}
+
 .daftar-lomba .row .content label {
   margin: 0.15rem 0;
   width: 25rem;
@@ -124,11 +137,6 @@ body {
 
 .daftar-lomba .row .content input:focus::placeholder {
   color: #c4c2c2;
-}
-
-.error {
-  color: red;
-  background-color: green;
 }
 
 /* button {
