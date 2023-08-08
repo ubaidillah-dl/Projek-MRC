@@ -1,12 +1,12 @@
 <?php
 
 // session
-session_start();
+// session_start();
 
-if (!isset($_SESSION["admin"])) {
-    header("Location:masuk_admin.php");
-    exit;
-}
+// if (!isset($_SESSION["admin"])) {
+//     header("Location:masuk_admin.php");
+//     exit;
+// }
 
 // konek database
 require '../fungsi.php';
@@ -38,7 +38,8 @@ if (isset($_POST["daftar_admin"])) {
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Prompt:wght@100;300;400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Prompt:wght@100;300;400;700&display=swap"
+        rel="stylesheet" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="../css/daftar.css" />
@@ -71,19 +72,25 @@ if (isset($_POST["daftar_admin"])) {
                     <!-- Error end -->
 
                     <!-- Nama start -->
-                    <div class="nama-tim input"><label for="nama">Nama</label><input autofocus autocomplete="off" id="nama" required type="text" placeholder="Masukkan Nama" name="nama" /></div>
+                    <div class="nama-tim input"><label for="nama">Nama</label><input autofocus autocomplete="off"
+                            id="nama" required type="text" placeholder="Masukkan Nama" name="nama" /></div>
                     <!-- Nama end -->
 
                     <!-- Nim start -->
-                    <div class="nama-tim input"><label for="nim">NIM</label><input id="nim" autofocus autocomplete="off" required type="text" placeholder="Masukkan NIM" name="nim" /></div>
+                    <div class="nama-tim input"><label for="nim">NIM</label><input id="nim" autofocus autocomplete="off"
+                            required type="text" placeholder="Masukkan NIM" name="nim" /></div>
                     <!-- Nim tim end -->
 
                     <!-- Password start -->
-                    <div class="nama-instansi input"><label for="password">Password</label><input id="password" autocomplete="off" required type="password" placeholder="Masukkan Password" name="password" /></div>
+                    <div class="nama-instansi input"><label for="password">Password</label><input id="password"
+                            autocomplete="off" required type="password" placeholder="Masukkan Password"
+                            name="password" /></div>
                     <!-- Password start -->
 
                     <!-- Konfirmasi password start -->
-                    <div class="nama-instansi input"><label for="konfirmasi_password">Password</label><input id="konfirmasi_password" autocomplete="off" required type="password" placeholder="Konfirmasi Password" name="konfirmasi_password" /></div>
+                    <div class="nama-instansi input"><label for="konfirmasi_password">Password</label><input
+                            id="konfirmasi_password" autocomplete="off" required type="password"
+                            placeholder="Konfirmasi Password" name="konfirmasi_password" /></div>
                     <!-- Konfirmasi password end -->
 
                     <button type="submit" name="daftar_admin">Daftar</button>

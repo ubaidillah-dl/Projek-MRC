@@ -308,6 +308,76 @@ body {
   transition: 0.3s;
 }
 
+/* Rulebokk */
+.rulebook .row {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.rulebook .row img {
+  width: 100%;
+  border: 0.1rem solid var(--primary);
+  border-radius: 10px;
+}
+
+.rulebook .row .foto1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.rulebook .row .foto2 {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 10px;
+}
+
+.rulebook .row .foto3 {
+  position: relative;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.rulebook .row .foto3::after {
+  color: var(--bg);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: "Unduh untuk membaca lebih lanjut";
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 3rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.rulebook a {
+  margin: 2rem 0;
+  display: inline-block;
+  margin-left: 1rem;
+  font-weight: 400;
+  background: linear-gradient(var(--primary) -30%, var(--secondary) 100%);
+  color: #fff;
+  padding: 0.5rem 0;
+  width: 9.5rem;
+  text-align: center;
+  border-radius: 5px;
+  filter: drop-shadow(1px 1px 1px var(--bg));
+}
+
+.rulebook a:hover {
+  scale: 1.04;
+  transition: 0.3s;
+  filter: drop-shadow(1px 1px 5px var(--bg));
+}
+
 @keyframes slide {
   0%,
   100% {
@@ -367,6 +437,30 @@ body {
 .kontak h2 span {
   color: var(--primary);
   text-shadow: 2px 2px 0 var(--secondary);
+}
+
+.rulebook {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.rulebook .rekening {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.rulebook .rekening table {
+  /* color: #000000; */
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: var(--pritrans);
+}
+
+.rulebook table tr td {
+  padding: 0 0.6rem;
 }
 
 .linimasa .row .linimasa-img {
@@ -504,8 +598,26 @@ footer .credit a {
 
   .hero .content .row,
   .tentang .row,
-  .kontak .row {
+  .kontak .row,
+  .rulebook .row {
     flex-wrap: wrap;
+  }
+
+  .rulebook .row div {
+    margin-bottom: 1rem;
+  }
+
+  .rulebook .rekening {
+    margin: 0;
+  }
+
+  .rulebook a {
+    margin: 1rem 0;
+  }
+
+  .rulebook .row img,
+  .rulebook .row .foto3::after {
+    width: 50%;
   }
 
   .tentang .row .keterangan {
