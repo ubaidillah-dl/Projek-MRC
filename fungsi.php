@@ -275,3 +275,76 @@ function masuk_admin($data)
 
     return $error;
 }
+
+
+if (isset($_GET['cdr'])) {
+    $fileName = $_GET['cdr'];
+    $filePath = 'assets/unduh/' . $fileName;
+
+    if (file_exists($filePath)) {
+        header('Content-Description: File Transfer');
+        header('Content-Type: application/octet-stream');
+        header('Content-Disposition: attachment; filename="' . $fileName . '"');
+        header('Expires: 0');
+        header('Cache-Control: must-revalidate');
+        header('Pragma: public');
+        header('Content-Length: ' . filesize($filePath));
+        readfile($filePath);
+        exit;
+    } else {
+        echo '
+                <script>
+                    alert("File tidak ditemukan !");
+                    document.location.href = "index.php"; 
+                </script>
+            ';
+    }
+}
+
+if (isset($_GET['jalur'])) {
+    $fileName = $_GET['jalur'];
+    $filePath = 'assets/unduh/' . $fileName;
+
+    if (file_exists($filePath)) {
+        header('Content-Description: File Transfer');
+        header('Content-Type: application/octet-stream');
+        header('Content-Disposition: attachment; filename="' . $fileName . '"');
+        header('Expires: 0');
+        header('Cache-Control: must-revalidate');
+        header('Pragma: public');
+        header('Content-Length: ' . filesize($filePath));
+        readfile($filePath);
+        exit;
+    } else {
+        echo '
+                <script>
+                    alert("File tidak ditemukan !");
+                    document.location.href = "index.php"; 
+                </script>
+            ';
+    }
+}
+
+if (isset($_GET['rulebook'])) {
+    $fileName = $_GET['rulebook'];
+    $filePath = 'assets/unduh/' . $fileName;
+
+    if (file_exists($filePath)) {
+        header('Content-Description: File Transfer');
+        header('Content-Type: application/octet-stream');
+        header('Content-Disposition: attachment; filename="' . $fileName . '"');
+        header('Expires: 0');
+        header('Cache-Control: must-revalidate');
+        header('Pragma: public');
+        header('Content-Length: ' . filesize($filePath));
+        readfile($filePath);
+        exit;
+    } else {
+        echo '
+                <script>
+                    alert("File tidak ditemukan !");
+                    document.location.href = "index.php"; 
+                </script>
+            ';
+    }
+}
