@@ -452,15 +452,44 @@ body {
   justify-content: center;
 }
 
-.rulebook .rekening table {
-  /* color: #000000; */
-  padding: 1rem;
+.rulebook .container {
   border-radius: 10px;
+  padding: 1rem;
   background-color: var(--pritrans);
+  width: 30rem;
 }
 
-.rulebook table tr td {
-  padding: 0 0.6rem;
+.rulebook .container .nama {
+  width: 7rem;
+}
+
+.rulebook .container .nomor {
+  width: 20rem;
+}
+
+.rulebook .container .an {
+  /* background-color: rebeccapurple; */
+  text-align: end;
+  width: 20rem;
+}
+
+.rulebook .btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rulebook .bri {
+  justify-content: space-between;
+  display: flex;
+}
+
+.rulebook .dana {
+  justify-content: space-between;
+  display: flex;
+}
+
+.rulebook .rekening .container h4 {
+  margin-bottom: 0.6rem;
 }
 
 .linimasa .row .linimasa-img {
@@ -607,12 +636,48 @@ footer .credit a {
     margin-bottom: 1rem;
   }
 
+  .rulebook .rekening .container {
+    width: 20rem;
+    /* padding: 0; */
+  }
+
   .rulebook .rekening {
+    /* width: 100%; */
     margin: 0;
   }
 
+  .rulebook .btn {
+    width: 100%;
+    display: block;
+  }
+
+  .rulebook .bri {
+    width: 100%;
+    display: block;
+  }
+
+  .rulebook .dana {
+    width: 100%;
+
+    display: block;
+  }
+
+  .rulebook .rekening .container .nama,
+  .rulebook .rekening .container .nomor,
+  .rulebook .rekening .container .an {
+    text-align: center;
+    width: 100%;
+  }
+
+  .rulebook .rekening .container .an {
+    margin-bottom: 0.6rem;
+  }
+
+  .rulebook .rekening .container h4 {
+    text-align: center;
+  }
   .rulebook a {
-    margin: 1rem 0;
+    margin: 2rem 0;
   }
 
   .rulebook .row img,
