@@ -5,7 +5,7 @@
 $conn = mysqli_connect("localhost", "event_mrc", "MRC@CY!WSVQuNuzlWkVzXP5g", "event_mrc");
 
 // variabel
-$ekstensi = ['jpg', 'jpeg', 'png', 'pdf'];
+$ekstensi = ['jpg', 'jpeg', 'png'];
 $maksimal = 1000000;
 
 function query($query)
@@ -199,20 +199,6 @@ function up_bukti_up_twibbon_anggota()
     move_uploaded_file($tmp_bukti_up_twibbon_anggota, 'assets/unggah/bukti_up_twibbon_anggota/' . $nama_bukti_up_twibbon_anggota_baru);
 
     return $nama_bukti_up_twibbon_anggota_baru;
-}
-
-function cari($keyword)
-{
-    $query = "SELECT * FROM peserta_mrc WHERE 
-            nama_tim LIKE '%$keyword%' OR 
-            nama_instansi LIKE '%$keyword%' OR
-            nama_pembina LIKE '%$keyword%' OR
-            nama_ketua LIKE '%$keyword%' OR
-            email_ketua LIKE '%$keyword%' OR
-            nomor_whatsapp_ketua LIKE '%$keyword%' OR
-            nama_anggota LIKE '%$keyword%'
-            ";
-    return query($query);
 }
 
 function daftar_admin($data)

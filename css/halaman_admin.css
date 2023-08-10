@@ -1,0 +1,175 @@
+:root {
+  --primary: #ffd91d;
+  --pritrans: #ffd91d5e;
+  --pritrans2: #f8e896ab;
+  --secondary: #ff0000;
+  --sectrans: #ff000073;
+  --font: #eee;
+  --bg: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Prompt", sans-serif;
+  background-color: var(--bg);
+}
+
+.hero {
+  height: 100vh;
+  padding: 1rem 10%;
+  background-color: var(--bg);
+}
+
+.hero .content {
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.hero .content .row .heading {
+  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  color: var(--font);
+}
+
+.hero .content .row h1 {
+  text-align: center;
+}
+.hero .content .row h1 span {
+  color: var(--primary);
+  text-shadow: 2px 2px 0 var(--secondary);
+}
+
+.hero .content .row table {
+  border-radius: 10px;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--primary);
+  color: var(--font);
+}
+
+.hero .content .row table tr th {
+  position: relative;
+  text-align: center;
+  padding: 0.5rem 0.5rem;
+}
+
+.hero .content .row table tr th.no {
+  width: 5%;
+}
+
+.hero .content .row table tr th.detail {
+  width: 10%;
+}
+
+.hero .content .row table tr th.nama_tim {
+  width: 17%;
+}
+
+.hero .content .row table tr th.nama_instansi {
+  width: 17%;
+}
+
+.hero .content .row table tr th.nama_pembina {
+  width: 17%;
+}
+
+.hero .content .row table tr th.nama_ketua {
+  width: 17%;
+}
+
+.hero .content .row table tr th.nama_anggota {
+  width: 17%;
+}
+
+.hero .content .row table tr {
+  background-color: var(--bg);
+}
+
+.hero .content .row table tr:nth-child(even) {
+  background-color: var(--pritrans2);
+}
+
+.hero .content .row table tr:nth-child(odd) {
+  background-color: var(--pritrans);
+}
+
+.hero .content .row table tr td {
+  padding: 0.3rem 0.5rem;
+  text-align: center;
+}
+
+.hero .content .row table tr td a {
+  color: var(--font);
+}
+
+.hero .content .row table tr.head {
+  background-color: var(--sectrans);
+}
+
+.hero .content .row .bawah {
+  margin-top: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero .content .row .bawah .keluar {
+  display: flex;
+}
+
+.hero .content .row .bawah .keluar .keluar,
+.hero .content .row .bawah .unduh .unduh {
+  color: var(--font);
+}
+
+.hero .content .row .bawah .pagination a {
+  color: var(--font);
+  padding: 0 0.1rem;
+}
+
+.hero .content .row .bawah .pagination a.halaman_aktif {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.hero .content .row .bawah .pagination a.halaman_nonaktif {
+  color: var(--sectrans);
+}
+
+/* Laptop */
+@media (max-width: 1200px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 80%;
+  }
+
+  .hilang {
+    display: none;
+  }
+}
+
+/* Phone */
+@media (max-width: 480px) {
+  html {
+    font-size: 70%;
+  }
+}
