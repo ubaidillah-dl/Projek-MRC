@@ -31,8 +31,7 @@ if (isset($_POST["masuk_admin"])) {
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Prompt:wght@100;300;400;700&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Prompt:wght@100;300;400;700&display=swap" rel="stylesheet" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="../css/daftar.css" />
@@ -59,14 +58,11 @@ if (isset($_POST["masuk_admin"])) {
                     <div style="text-align: end; color: red; font-size: 0.7rem"><?php echo $error; ?></div>
 
                     <!-- Nim start -->
-                    <div class="nama-tim input"><label for="nim">NIM</label><input id="nim" autofocus autocomplete="off"
-                            required type="text" placeholder="Masukkan NIM" name="nim" /></div>
+                    <div class="nama-tim input"><label for="nim">NIM</label><input id="nim" autofocus autocomplete="off" required type="text" placeholder="Masukkan NIM" name="nim" /></div>
                     <!-- Nim tim end -->
 
                     <!-- Password start -->
-                    <div class="nama-instansi input"><label for="password">Password</label><input id="password"
-                            autocomplete="off" required type="password" placeholder="Masukkan Password"
-                            name="password" /></div>
+                    <div class="nama-instansi input"><label for="password">Password</label><input id="password" autocomplete="off" required type="password" placeholder="Masukkan Password" name="password" /></div>
                     <!-- Password start -->
 
                     <button type="submit" name="masuk_admin">Masuk</button>

@@ -54,15 +54,14 @@
         <main class="content">
             <div class="row">
                 <div class="tema">
-                    <h3>MRC 2023</h3>
+                    <h3>MRC 2024</h3>
                     <h2>WE'RE BACK WITH BETTER EXPERIENCE AND BEST EVOLUTION</h2>
                 </div>
 
                 <div class="tombol">
-                    <!-- <a href="daftar.php" target="_blank" class="daftar">Daftar Lomba</a> -->
-                    <a href="" class="daftar">Daftar Lomba</a>
+                    <a href="daftar.php" target="_blank" class="daftar">Daftar Lomba</a>
                     <a href="#Tentang" class="tombol-tentang">Tentang Kami</a>
-                    <a href="" class="tombol-tentang">Twibbon</a>
+                    <a href="https://twb.nz/twibbonpesertamrcvi" target="_blank" class="tombol-tentang">Twibbon</a>
                 </div>
             </div>
         </main>
@@ -75,7 +74,7 @@
         <div class="row">
             <video src="assets/Track.mp4" autoplay muted loop></video>
             <div class="tombol-unduh">
-                <a href="fungsi.php?jalur=Jalur.cdr">Unduh Jalur</a>
+                <a href="fungsi.php?jalur=Jalur.png">Unduh .PNG</a>
                 <a href="fungsi.php?cdr=Trackline.cdr">Unduh .CDR</a>
             </div>
         </div>

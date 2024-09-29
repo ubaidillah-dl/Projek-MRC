@@ -39,12 +39,6 @@ body {
   height: 100%;
 }
 
-.hero .content .row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 .hero .content .heading {
   padding-bottom: 1rem;
   padding-top: 0.5rem;
@@ -54,9 +48,16 @@ body {
 .hero .content h1 {
   text-align: center;
 }
+
 .hero .content h1 span {
   color: var(--primary);
   text-shadow: 2px 2px 0 var(--secondary);
+}
+
+.hero .content .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .hero .content .row table {

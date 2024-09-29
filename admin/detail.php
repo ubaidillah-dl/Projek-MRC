@@ -19,8 +19,7 @@ $mrc = query("SELECT * FROM peserta_mrc WHERE id = $id")[0];
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Prompt:wght@100;300;400;700&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Prompt:wght@100;300;400;700&display=swap" rel="stylesheet" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="../css/detail.css" />
@@ -105,8 +104,7 @@ $mrc = query("SELECT * FROM peserta_mrc WHERE id = $id")[0];
                 <!-- bukti up twibbon anggota start -->
                 <div class="bukti_up_twibbon_anggota">
                     Bukti Up Twibbon Anggota :
-                    <img src="../assets/unggah/bukti_up_twibbon_anggota/<?= $mrc["bukti_up_twibbon_anggota"]; ?>"
-                        alt="" />
+                    <img src="../assets/unggah/bukti_up_twibbon_anggota/<?= $mrc["bukti_up_twibbon_anggota"]; ?>" alt="" />
                 </div>
                 <!-- bukti up twibbon anggota start -->
             </div>
@@ -114,7 +112,7 @@ $mrc = query("SELECT * FROM peserta_mrc WHERE id = $id")[0];
     </div>
 
     <script>
-    feather.replace();
+        feather.replace();
     </script>
 </body>
 
