@@ -1,0 +1,732 @@
+:root {
+  --primary: #ffd91d;
+  --pritrans: #ffd91d5e;
+  --secondary: #ff0000;
+  --sectrans: #ff000073;
+  --font: #ffe30d;
+  --bg: #000000;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Prompt", sans-serif;
+  background: var(--bg);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 10%;
+  background: var(--bg);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  align-items: center;
+  margin: 0;
+  z-index: 9999;
+}
+
+.navbar .nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .nav-logo:hover {
+  scale: 1.04;
+  transition: 0.3s;
+  filter: drop-shadow(0 0 5px var(--secondary));
+}
+
+.navbar .nav-logo a {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .nav-logo .logo-img img {
+  height: 3.5rem;
+  margin-right: 1rem;
+}
+
+.navbar .nav-logo .logo-tittle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--font);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  border-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--secondary);
+  transform: scaleX(0);
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+  transition: 0.2s;
+}
+
+.navbar .masuk {
+  height: 2.5rem;
+  width: 2.5rem;
+  background: var(--primary);
+  padding: 0.2rem;
+  border-radius: 15%;
+  align-items: center;
+  display: flex;
+}
+
+.navbar .masuk #masuk .feather {
+  height: 2.5rem;
+  width: 100%;
+  color: var(--bg);
+}
+
+.navbar .menu {
+  height: 2.5rem;
+  width: 2.5rem;
+  background: var(--primary);
+  padding: 0.2rem;
+  border-radius: 15%;
+  align-items: center;
+  display: none;
+}
+
+.navbar .menu:hover,
+.navbar .masuk:hover {
+  scale: 1.07;
+  transition: 0.3s;
+  filter: drop-shadow(0 0 5px var(--secondary));
+}
+
+.navbar .menu a,
+.navbar .masuk a {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .menu #humberger-menu .feather {
+  height: 2.5rem;
+  width: 100%;
+  color: var(--bg);
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  bottom: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: 250vh;
+  background-image: url("../assets/Bg1.jpg");
+  animation: animate 250s infinite alternate linear;
+  -webkit-animation: animate 250s infinite alternate linear;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    background-image: url(../assets/Bg1.jpg);
+    background-position: right top;
+  }
+  25% {
+    background-image: url(../assets/Bg2.jpg);
+    background-position: left bottom;
+  }
+  50% {
+    background-image: url(../assets/Bg3.jpg);
+    background-position: right top;
+  }
+  75% {
+    background-image: url(../assets/Bg4.jpg);
+    background-position: left bottom;
+  }
+}
+
+.hero::after {
+  content: "";
+  background: rgba(191, 163, 21, 0.8);
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 101% 101%;
+  background-image: url(../assets/Background.svg);
+}
+
+.hero .content {
+  z-index: 1;
+  padding: 1rem 10%;
+  left: 0;
+}
+
+.hero .content .row {
+  display: flex;
+  align-items: center;
+}
+
+.hero .content .row .tema {
+  flex: 1 1 60rem;
+}
+
+.hero .content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+  background: linear-gradient(var(--primary) -30%, var(--secondary) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(1px 1px 1px var(--bg));
+}
+
+.hero .content h2 {
+  color: #fff;
+  text-shadow: 3px 3px 0 var(--bg);
+  font-family: "Black Ops One", sans-serif;
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  filter: drop-shadow(1px 1px 1px var(--bg));
+}
+
+.hero .content .row .tombol {
+  flex: 1 1 30rem;
+}
+
+.hero .content .row .tombol a {
+  display: block;
+  margin: 0.7rem 0;
+  margin-left: auto;
+  font-weight: 400;
+  background: linear-gradient(var(--primary) -30%, var(--secondary) 100%);
+  color: #fff;
+  padding: 0.5rem 0;
+  width: 8rem;
+  text-align: center;
+  border-radius: 5px;
+  filter: drop-shadow(1px 1px 1px var(--bg));
+}
+
+.hero .content .row .tombol a:hover {
+  scale: 1.04;
+  transition: 0.3s;
+  filter: drop-shadow(1px 1px 5px var(--bg));
+}
+
+.hero .content .row .tombol .tombol-tentang {
+  background: rgba(255, 0, 0, 0.2);
+  border: 1.5px #fff solid;
+}
+
+/* Trackline */
+.trackline .row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.trackline .row .tombol-unduh {
+  padding-top: 1rem;
+}
+
+.trackline .row .tombol-unduh a {
+  margin: 0.7rem 0;
+  display: inline-block;
+  margin-left: 1rem;
+  font-weight: 400;
+  background: linear-gradient(var(--primary) -30%, var(--secondary) 100%);
+  color: #fff;
+  padding: 0.5rem 0;
+  width: 8rem;
+  text-align: center;
+  border-radius: 5px;
+  filter: drop-shadow(1px 1px 1px var(--bg));
+}
+
+.trackline .row .tombol-unduh a:hover {
+  scale: 1.04;
+  transition: 0.3s;
+  filter: drop-shadow(1px 1px 5px var(--bg));
+}
+
+.trackline video {
+  width: 80%;
+  border-radius: 10px;
+  align-items: center;
+}
+
+/* Tentang kami */
+.tentang .row {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.tentang .row .foto {
+  flex: 1 1 30rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  aspect-ratio: 4/2;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../assets/Bg1.jpg");
+  animation: slide 25s infinite alternate;
+  -webkit-animation: slide 25s infinite alternate;
+}
+
+.tentang .row .foto:hover {
+  scale: 1.01;
+  transition: 0.3s;
+}
+
+/* Rulebokk */
+.rulebook .row {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.rulebook .row img {
+  width: 100%;
+  border: 0.1rem solid var(--primary);
+  border-radius: 10px;
+}
+
+.rulebook .row .foto1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.rulebook .row .foto2 {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 10px;
+}
+
+.rulebook .row .foto3 {
+  position: relative;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.rulebook .row .foto3::after {
+  color: var(--bg);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: "Unduh untuk membaca lebih lanjut";
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 3rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.rulebook a {
+  margin: 2rem 0;
+  display: inline-block;
+  margin-left: 1rem;
+  font-weight: 400;
+  background: linear-gradient(var(--primary) -30%, var(--secondary) 100%);
+  color: #fff;
+  padding: 0.5rem 0;
+  width: 9.5rem;
+  text-align: center;
+  border-radius: 5px;
+  filter: drop-shadow(1px 1px 1px var(--bg));
+}
+
+.rulebook a:hover {
+  scale: 1.04;
+  transition: 0.3s;
+  filter: drop-shadow(1px 1px 5px var(--bg));
+}
+
+@keyframes slide {
+  0%,
+  100% {
+    background-image: url(../assets/Bg1.jpg);
+  }
+  25% {
+    background-image: url(../assets/Bg2.jpg);
+  }
+  50% {
+    background-image: url(../assets/Bg3.jpg);
+  }
+  75% {
+    background-image: url(../assets/Bg4.jpg);
+  }
+}
+
+.tentang .row .keterangan {
+  flex: 1 1 30rem;
+}
+
+.tentang .row .keterangan p {
+  font-size: 1rem;
+}
+
+.tentang .row .keterangan p span {
+  color: var(--primary);
+  font-family: "Black Ops One", sans-serif;
+  text-shadow: 1px 1px 0 var(--secondary);
+}
+
+/* Linimasa */
+.tentang,
+.linimasa,
+.rulebook,
+.trackline,
+.kontak {
+  padding: 1rem 10%;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  color: #fff;
+}
+
+.tentang h2,
+.linimasa h2,
+.rulebook h2,
+.trackline h2,
+.kontak h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.tentang h2 span,
+.linimasa h2 span,
+.rulebook h2 span,
+.trackline h2 span,
+.kontak h2 span {
+  color: var(--primary);
+  text-shadow: 2px 2px 0 var(--secondary);
+}
+
+.rulebook {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.rulebook .rekening {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.rulebook .container {
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: var(--pritrans);
+  width: 30rem;
+}
+
+.rulebook .container .nama {
+  width: 7rem;
+}
+
+.rulebook .container .nomor {
+  width: 20rem;
+}
+
+.rulebook .container .an {
+  /* background-color: rebeccapurple; */
+  text-align: end;
+  width: 20rem;
+}
+
+.rulebook .btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rulebook .bri {
+  justify-content: space-between;
+  display: flex;
+}
+
+.rulebook .dana {
+  justify-content: space-between;
+  display: flex;
+}
+
+.rulebook .rekening .container h4 {
+  margin-bottom: 0.6rem;
+}
+
+.linimasa .row .linimasa-img {
+  display: flex;
+  justify-content: center;
+}
+
+.linimasa .row .linimasa-img img {
+  border: 0.1rem solid var(--primary);
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 80%;
+}
+
+/* Footer */
+footer {
+  background: var(--pritrans);
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1rem 0 1rem;
+}
+
+footer .sosial,
+footer .link {
+  padding: 0.5rem 0;
+}
+
+footer .sosial a,
+footer .link a {
+  color: #fff;
+  padding: 0 0.5rem;
+}
+
+footer .sosial a:hover,
+footer .link a:hover {
+  color: var(--bg);
+}
+
+footer .credit {
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+footer .credit a {
+  color: var(--bg);
+  font-weight: 700;
+}
+/* ///////////////////////////////////////////////////////////////// */
+
+/* Laptop */
+@media (max-width: 1200px) {
+  html {
+    font-size: 90%;
+  }
+
+  .navbar .nav-logo .logo-tittle {
+    display: none;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 80%;
+  }
+
+  .navbar .nav-logo .logo-tittle {
+    display: none;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background: var(--bg);
+    width: 40vw;
+    height: 100vh;
+    transition: 0.5s;
+  }
+
+  .navbar .navbar-nav::before {
+    content: "";
+    background-color: var(--pritrans);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
+  .navbar .navbar-nav a {
+    position: relative;
+    display: block;
+    margin: 1.5rem;
+  }
+
+  .navbar .navbar-nav a:hover {
+    color: var(--bg);
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+    border-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--secondary);
+    z-index: 1;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .menu {
+    display: flex;
+  }
+
+  .navbar .masuk #masuk .feather {
+    color: var(--primary);
+  }
+
+  .navbar .masuk {
+    background: none;
+  }
+
+  .linimasa .row .linimasa-img img {
+    width: 100%;
+  }
+
+  .trackline video {
+    width: 100%;
+    border-radius: 10px;
+    align-items: center;
+  }
+
+  .hero .content .row,
+  .tentang .row,
+  .kontak .row,
+  .rulebook .row {
+    flex-wrap: wrap;
+  }
+
+  .rulebook .row div {
+    margin-bottom: 1rem;
+  }
+
+  .rulebook .rekening .container {
+    width: 20rem;
+    /* padding: 0; */
+  }
+
+  .rulebook .rekening {
+    /* width: 100%; */
+    margin: 0;
+  }
+
+  .rulebook .btn {
+    width: 100%;
+    display: block;
+  }
+
+  .rulebook .bri {
+    width: 100%;
+    display: block;
+  }
+
+  .rulebook .dana {
+    width: 100%;
+
+    display: block;
+  }
+
+  .rulebook .rekening .container .nama,
+  .rulebook .rekening .container .nomor,
+  .rulebook .rekening .container .an {
+    text-align: center;
+    width: 100%;
+  }
+
+  .rulebook .rekening .container .an {
+    margin-bottom: 0.6rem;
+  }
+
+  .rulebook .rekening .container h4 {
+    text-align: center;
+  }
+  .rulebook a {
+    margin: 2rem 0;
+  }
+
+  .rulebook .row img,
+  .rulebook .row .foto3::after {
+    width: 50%;
+  }
+
+  .tentang .row .keterangan {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+
+  .hero .content .row .tombol {
+    margin-top: 1.2rem;
+  }
+
+  .hero .content .row .tema h2 {
+    margin-top: 1.5rem;
+  }
+
+  .hero .content .row .tombol a {
+    margin: 1rem auto;
+  }
+
+  .hero .content .row .tema {
+    text-align: center;
+  }
+
+  .kontak .row .map {
+    height: 20rem;
+    border-radius: 0.6rem 0.6rem 0rem 0rem;
+  }
+
+  .kontak .row form {
+    padding-top: 0;
+  }
+
+  .trackline video {
+    width: 100%;
+  }
+}
+
+/* Phone */
+@media (max-width: 480px) {
+  html {
+    font-size: 70%;
+  }
+
+  .linimasa .row .linimasa-img img {
+    width: 100%;
+  }
+}

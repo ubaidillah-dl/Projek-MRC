@@ -1,0 +1,143 @@
+:root {
+  --primary: #ffd91d;
+  --pritrans: #ffd91d5e;
+  --pritrans2: #f8e896ab;
+  --secondary: #ff0000;
+  --sectrans: #ff000073;
+  --font: #eee;
+  --bg: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Prompt", sans-serif;
+  background-color: var(--bg);
+  color: var(--font);
+}
+
+.hero {
+  height: 100%;
+  padding: 1rem 10%;
+}
+
+.hero .content {
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.hero .content .heading {
+  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  color: var(--font);
+}
+
+.hero .content h1 {
+  text-align: center;
+}
+
+.hero .content h1 span {
+  color: var(--primary);
+  text-shadow: 2px 2px 0 var(--secondary);
+}
+
+.hero .content .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero .content .row table {
+  border-radius: 10px;
+  width: 60%;
+  overflow: hidden;
+  color: var(--font);
+  background-color: var(--pritrans);
+}
+
+.hero .content .row table tr th {
+  position: relative;
+  text-align: start;
+  padding: 0.5rem 0.5rem;
+}
+
+.hero .content .row .ktm_ketua,
+.hero .content .row .ktm_anggota,
+.hero .content .row .bukti_pembayaran,
+.hero .content .row .bukti_up_twibbon_ketua,
+.hero .content .row .bukti_up_twibbon_anggota {
+  font-weight: 600;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 1rem;
+  padding: 0.5rem 0.5rem;
+  background-color: var(--pritrans);
+  width: 60%;
+}
+
+.hero .content .row .ktm_ketua img,
+.hero .content .row .ktm_anggota img,
+.hero .content .row .bukti_pembayaran img,
+.hero .content .row .bukti_up_twibbon_ketua img,
+.hero .content .row .bukti_up_twibbon_anggota img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+/* Laptop */
+@media (max-width: 1200px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 80%;
+  }
+
+  .hero .content .row table {
+    width: 80%;
+  }
+
+  .hero .content .row .ktm_ketua,
+  .hero .content .row .ktm_anggota,
+  .hero .content .row .bukti_pembayaran,
+  .hero .content .row .bukti_up_twibbon_ketua,
+  .hero .content .row .bukti_up_twibbon_anggota {
+    width: 80%;
+  }
+}
+
+/* Phone */
+@media (max-width: 480px) {
+  html {
+    font-size: 70%;
+  }
+
+  .hero .content .row table {
+    width: 100%;
+  }
+
+  .hero .content .row .ktm_ketua,
+  .hero .content .row .ktm_anggota,
+  .hero .content .row .bukti_pembayaran,
+  .hero .content .row .bukti_up_twibbon_ketua,
+  .hero .content .row .bukti_up_twibbon_anggota {
+    width: 100%;
+  }
+}
